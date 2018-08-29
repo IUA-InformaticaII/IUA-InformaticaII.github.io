@@ -1,5 +1,6 @@
 var gulp = require('gulp');
 var include = require('gulp-html-tag-include');
+var deploy = require('gulp-gh-pages');
 
 
 // Mueve archivos de assets
@@ -46,5 +47,5 @@ gulp.task('moverReveal', function () {
  */
 gulp.task('deploy', ['html-include', 'mover'], function () {
     return gulp.src("./build/**/*")
-        .pipe(gulp.dest('build'))
+        .pipe(deploy({branch: 'master'}))
 });
