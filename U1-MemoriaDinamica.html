@@ -265,7 +265,7 @@ int main(){
     // Debería vefiricar que miMatriz no es NULL
     int i;
     for( i = 0 ; i < filas ; i++ ){
-        miMatriz[i] = (int*) malloc( cols * sizeof(int) );
+        miMatriz[i] = (int*) malloc( columnas * sizeof(int) );
         // Debería vefiricar que miMatriz[i] no es NULL
     }
     // Lo mismo con el Free, debo liberar cada malloc que hice.
@@ -273,7 +273,7 @@ int main(){
     for( i = 0 ; i < filas ; i++ ){
         free(miMatriz[i]);
     }
-    free(miMatriz[i]);
+    free(miMatriz);
 }
 </code></pre>
 </section>
