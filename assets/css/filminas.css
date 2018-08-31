@@ -53,25 +53,29 @@
     padding: 0 7px;
 }
 
-.ejercicio {
-    background: url('../images/code.png') no-repeat;
-    vertical-align: middle;
-    padding: 15px !important;
-}
-
-.output {
+.reveal .output {
     margin: 20px auto;
     width: 90%;
     display: block;
     padding: 5px;
     overflow: auto;
-    max-height: 400px;
+    max-height: 200px;
+    min-height: 200px;
     word-wrap: normal;
     background: #3f3f3f;
     font-family: monospace;
+    font-size: 22px;
+    text-align: left;
     text-transform: none;
     vertical-align: baseline;
     border: 0;
     color: #dcdcdc;
-    text-align: left;
+}
+
+.reveal pre code{
+    max-height: 330px;
+}
+
+.reveal  .playsol {
+    margin: -40px 0 -17px 0;
 }
