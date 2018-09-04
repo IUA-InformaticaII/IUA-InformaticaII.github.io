@@ -79,3 +79,13 @@
 .reveal  .playsol {
     margin: -40px 0 -17px 0;
 }
+
+.reveal .desc-qs td{
+    text-align: center;
+}
+.reveal .desc-qs{
+    font-size: 0.8em;
+}
+.reveal .dato-qs{
+    font-size: 2.2em;
+}
