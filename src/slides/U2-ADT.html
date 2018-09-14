@@ -131,18 +131,6 @@
     <h2>¿Qué es una clase?</h2>
     <ul>
         <li>Una clase es una plantilla para saber como crear Objetos</li>
-        <li>Una clase es un modelo que define un conjunto de <b>Variables</b>(el estado) y <b>métodos</b> para operar
-            con
-            el estado (el comportamiento)
-        </li>
-        <li>Los objetos se crean a partir de de las clases y se llaman <b>Instancias</b></li>
-        <li>Es una forma de abstraerse de los datos y sus operaciones y verlos como una "caja negra".</li>
-    </ul>
-</section>
-<section>
-    <h2>¿Qué es una clase?</h2>
-    <ul>
-        <li>Una clase es una plantilla para saber como crear Objetos</li>
         <li>Una clase es un modelo que define un conjunto de <b>Atributos</b>(el estado) y <b>Métodos</b> para operar
             con
             el estado (el comportamiento)
@@ -174,7 +162,7 @@
     </ul>
 </section>
 <section>
-    <h2>Ojetos</h2>
+    <h2>Objetos</h2>
     <ul>
         <li>Son una instancia creada a partir de una clase.</li>
         <li>Poseen <b>Identidad</b>, lo que los diferencia de otros objetos</li>
@@ -209,7 +197,7 @@ public:
     especifica el tipo de dato que devuelven, y poseen el mismo nombre que la clase a la que pertenecen. Al igual que
     otros métodos, puede haber varios constructores sobrecargados, aunque no pueden existir constructores virtuales.
 </section>
-<section>
+<section style="font-size: 0.8em">
     <h2>Destructor</h2>
     Los destructores son funciones miembro especiales llamadas automáticamente en la ejecución del programa, y por tanto
     no tienen por qué ser llamadas explícitamente por el programador. Sus principales cometidos son:
@@ -261,7 +249,7 @@ int Punto::ObtenerY(){
 </section>
 <section>
     <h2>Palabra clave <b>this</b></h2>
-    <p>Es un puntero que hace referencia al propio objeto. Es utilizado para poder acceder a los atributos de la
+    <p style="font-size: 0.8em;">Es un puntero que hace referencia al propio objeto. Es utilizado para poder acceder a los atributos de la
         instancia del objeto al cual pertenece el método</p>
     <p>Comúnmente puede ser obviado su uso, ya que llamando directamente al atributo también podemos acceder</p>
     <pre><code class="hljs c++" data-trim contenteditable spellcheck="false">
@@ -276,20 +264,21 @@ int Punto::EscribirX(int x){
         </code></pre>
 </section>
 <section>
-    <h1>Diagrama de clase (UML)</h1>
+    <h3>Diagrama de clase (UML)</h3>
     Es un diagrama utilizado para mostrar rapidamente que posee una clase
-    <table>
+    <table style="
+  border-collapse: collapse;border: solid 4px; border-radius:4px; font-size: 0.8em">
         <thead>
         <tr><th>Nombre de Clase</th></tr>
         </thead>
         <tbody>
-        <tr><td style="border-top: solid 2px">-atributo1: tipo</td></tr>
-        <tr><td>-atributo2: tipo</td></tr>
-        <tr><td>-atributo3: tipo</td></tr>
-        <tr><td style="border-top: solid 2px">+metodo1(param: tipo):tipo retorno</td></tr>
-        <tr><td>+metodo2(param: tipo):tipo retorno</td></tr>
-        <tr><td>+metodo3(param: tipo):tipo retorno</td></tr>
-        <tr><td>+metodo4(param: tipo):tipo retorno</td></tr>
+        <tr><td style="border:none;border-top: solid 4px">-atributo1: tipo</td></tr>
+        <tr><td style="border:none;">-atributo2: tipo</td></tr>
+        <tr><td style="border:none">-atributo3: tipo</td></tr>
+        <tr><td style="border:none;border-top: solid 4px">+metodo1(param: tipo):tipo retorno</td></tr>
+        <tr><td style="border:none">+metodo2(param: tipo):tipo retorno</td></tr>
+        <tr><td style="border:none">+metodo3(param: tipo):tipo retorno</td></tr>
+        <tr><td style="border:none">+metodo4(param: tipo):tipo retorno</td></tr>
         </tbody>
     </table>
 </section>
