@@ -1,0 +1,366 @@
+<!doctype html>
+<html lang="es">
+<head>
+
+    <link href='images/code.ico' rel='shortcut icon' type='image/x-icon'>
+    <meta charset="utf-8">
+
+    <title>TDA</title>
+    <meta name="description" content="Tipos de datos Abstractos">
+    <meta name="author" content="
+    Ricardo Martin Marcucci
+">
+
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/reveal.css">
+    <link rel="stylesheet" href="css/theme/league.css" id="theme">
+
+    <link rel="icon" href="https://www.iua.edu.ar/wp-content/uploads/sites/6/2016/12/favicon.png" sizes="32x32" />
+    <link rel="icon" href="https://www.iua.edu.ar/wp-content/uploads/sites/6/2016/12/favicon.png" sizes="192x192" />
+    <link rel="apple-touch-icon-precomposed" href="https://www.iua.edu.ar/wp-content/uploads/sites/6/2016/12/favicon.png" />
+
+    <!-- Theme used for syntax highlighting of code -->
+    <link rel="stylesheet" href="lib/css/zenburn.css">
+    <link rel="stylesheet" href="css/filminas.css">
+    <script src="js/JSCPP.es5.min.js"></script>
+    <script src="js/runcpp.js"></script>
+
+    <!-- Printing and PDF exports -->
+    <script>
+        var link = document.createElement( 'link' );
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+        document.getElementsByTagName( 'head' )[0].appendChild( link );
+    </script>
+
+    <!--[if lt IE 9]>
+    <script src="lib/js/html5shiv.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+
+<div class="reveal">
+
+    <!-- Any section element inside of this container is displayed as a slide -->
+    <div class="slides">
+
+
+<section>
+    <h1>Tipos de datos Abstractos</h1>
+    
+
+    <p>
+        <small>Created by
+            <a href="https://t.me/rmarku" target="_blank">
+                <i class="fab fa-telegram-plane"></i>rmarku
+            </a>
+        </small>
+    </p>
+</section>
+
+
+<section>
+    <h2>¿Qué es la Información?</h2>
+    Unidad básica de información (BIT)
+
+    <ul>
+        <li>1 bit ➡️ 2 posiciones (0-1)</li>
+        <li>n bit ➡️ 2<sup>n</sup> posiciones</li>
+    </ul>
+</section>
+<section>
+    <h2>Enteros Binarios</h2>
+    <h4>Representación de enteros positivos</h4>
+    00100110 ➡️ 2<sup>1</sup> + 2<sup>2</sup> + 2<sup>5</sup>=2 + 4 + 32=38
+    <h4>Representación de enteros Negativos (complemento a 1)</h4>
+    11011001 ➡️ -38<br>
+    Podemos representar desde -2<sup>(n-1)</sup>-1 hasta 2<sup>(n-1)</sup>-1
+    <h4>Representación de enteros Negativos (complemento a 2)</h4>
+    11011010 ➡️ -38<br>
+    <aside class="notes">
+        El primer dígito representa positivo o negativo, en caso de ser negativo se invierten todos los otros bits<br>
+        En este caso se suma un 1 a la representación del comp lemento a 1 del número negativo.
+    </aside>
+</section>
+<section>
+    <h2>Números con coma Binarios</h2>
+    <h4>Notación de punto flotante</h4>
+    <p>El número 387,53 se representa como 38753x10<sup>-2</sup></p>
+    <p>El numero consta de una MANTISA(24) y un EXPONENTE(8).<br>
+        Comunmente se utilizan 32 bits</p>
+    <p>Esto nos permite representar números desde<br> 2<sup>23-1</sup> x 10<sup>127</sup> ➡️ 10<sup>-128</sup>
+
+    </p>
+</section>
+<section>
+    <h2>Caracteres</h2>
+    <h4>ASCII</h4>
+    <script>
+        function ascii(txt) {
+            document.getElementById("asciiOut").innerHTML = txt.value.charCodeAt(0);
+            txt.select();
+        }
+    </script>
+    <input type="text" maxlength="1" size="1" onkeyup="ascii(this)"
+           style="height: 100px;font-size: 40px;width: 100px;text-align: center;">
+    ➡️ <span id="asciiOut" style="min-width: 100px;display: inline-block;"></span>
+    <p>Interpretación de binarios en símbolos gráficos</p>
+    <p>Hay distintos encoding, ASCII, UTF8, UTF16, ISO, etc...</p>
+    <p>Lo mas común es utilizar 8bits, pero hay encodings de 7, 10, 16, 32 bits...</p>
+    <p>El número binario 00100110, puede ser el número 38, el 0x26 o el simboló '&'</p>
+    <aside class="notes">
+    </aside>
+</section>
+<section>
+    <h2>Hardware y Softare</h2>
+    <ul>
+        <li>La memoria de la PC es un conjunto de BITs</li>
+        <li>Los bits se agrupan de a BYTEs</li>
+        <li>Las computadoras tienen un conjunto de datos nativos</li>
+        <li>Los lenguajes de programación de alto nivel, ayudan a simplificar el uso de tipos de datos.</li>
+    </ul>
+    <aside class="notes">
+    </aside>
+</section>
+<section>
+    <h2>Tipo de Dato</h2>
+    <ul>
+        <li>No es un dato, es lo que puede contener</li>
+        <li>Un tipo de dato es, en esencia, un espacio en memoria con restricciones.</li>
+        <li>Por ejemplo, el tipo "int" representa, generalmente, un conjunto de enteros de 32 bits cuyo rango va desde
+            el -2.147.483.648 al 2.147.483.647
+        </li>
+        <li>También se restringen las operaciones que se pueden realizar en ellos.</li>
+        <li>No confundirlos con Tipos de Datos Abstractos</li>
+    </ul>
+    <aside class="notes">
+    </aside>
+</section>
+<section>
+    <h2>Tipos de Datos Abstractos</h2>
+    <p><b>Abstracción:</b> consiste en tomar las cualidades o características que nos resulten mas relevantes de un
+        objeto, con el fin de delimitar el analisis de este
+    </p>
+    <img style="height: 300px" src="images/tda/lordmeowington.png" alt="" class="noBorder">
+    ➡️
+    <img style="height: 300px" src="images/tda/dibujo-colorear-28-cat.jpg" alt="">
+
+    <aside class="notes">
+        La abstracción es una tecnica para centrarse en lo importante de un problema y solucionarlo mas facilmente.
+        Ej, Mapas
+    </aside>
+</section>
+<section>
+    <h2>Tipos de Datos Abstractos</h2>
+    <ul>
+        <li>Los TDA son una abstracción de algún tipo de dato</li>
+        <li>Formalmente se trata de un modelo matemático para tipos de datos que están definidos por su comportamiento o
+            semántica.
+        </li>
+        <li>Es un modelo matemático compuesto por una colección de operaciones definidas sobre un conjunto de datos para
+            el modelo.
+        </li>
+        <li>A nivel usuario, se pueden ver el esquema de los datos y las operaciones para manipular los elementos que lo
+            componen.
+        </li>
+    </ul>
+    <aside class="notes">
+    </aside>
+</section>
+<section>
+    <h2>Estructuras de datos</h2>
+    <p>Las estructuras de datos son la implementación de un Tipo de dato abstracto.</p>
+    <img style="background: white; border-radius: 10px;" src="images/tda/data.png" alt="">
+    <aside class="notes">
+    </aside>
+</section>
+<section>
+    <h2>Introducción a la Programación Orientada a Objetos</h2>
+    <p>Es un paradigma de porgramación que es muy cercano a como expresamríamos las cosas en la vida real.</p>
+    <img src="images/tda/objetos.png" alt="" class="noBorder" style="height: 300px">
+</section>
+<section>
+    <h2>¿Qué es una clase?</h2>
+    <ul>
+        <li>Una clase es una plantilla para saber como crear Objetos</li>
+        <li>Una clase es un modelo que define un conjunto de <b>Variables</b>(el estado) y <b>métodos</b> para operar
+            con
+            el estado (el comportamiento)
+        </li>
+        <li>Los objetos se crean a partir de de las clases y se llaman <b>Instancias</b></li>
+        <li>Es una forma de abstraerse de los datos y sus operaciones y verlos como una "caja negra".</li>
+    </ul>
+</section>
+<section>
+    <h2>¿Qué es una clase?</h2>
+    <ul>
+        <li>Una clase es una plantilla para saber como crear Objetos</li>
+        <li>Una clase es un modelo que define un conjunto de <b>Atributos</b>(el estado) y <b>Métodos</b> para operar
+            con
+            el estado (el comportamiento)
+        </li>
+        <li>Los objetos se crean a partir de de las clases y se llaman <b>Instancias</b></li>
+        <li>Es una forma de abstraerse de los datos y sus operaciones y verlos como una "caja negra".</li>
+    </ul>
+</section>
+<section>
+    <h2>¿Qué es una clase?</h2>
+    <img src="images/tda/clases-objetos.png" alt="" class="noBorder" style="height: 500px">
+</section>
+<section>
+    <h2>Clases: Atributos o Variables miembros</h2>
+    <ul>
+        <li>Son variables definidas dentro de la clase</li>
+        <li>Pueden ser <b>privadas</b> o <b>publicas</b></li>
+        <li>Definen el estado del objeto</li>
+        <li>Cada objeto tiene sus propios atributos</li>
+    </ul>
+</section>
+<section>
+    <h2>Clases: Métodos o Funciones miembros</h2>
+    <ul>
+        <li>Son funciones que reciden dentro de la clase</li>
+        <li>Pueden ser <b>privadas</b> o <b>publicas</b></li>
+        <li>Comumente operan con los atributos del objeto</li>
+        <li>Permiten darle comportamiento al objeto</li>
+    </ul>
+</section>
+<section>
+    <h2>Ojetos</h2>
+    <ul>
+        <li>Son una instancia creada a partir de una clase.</li>
+        <li>Poseen <b>Identidad</b>, lo que los diferencia de otros objetos</li>
+        <li>Existe realmente en memoría.</li>
+        <li>Cada uno tiene sus propios atributos y sus metodos trabajan con estos atributos.</li>
+    </ul>
+</section>
+<section>
+    <h2>Clases: Sintaxis</h2>
+    <pre><code class="hljs c++" data-trim contenteditable spellcheck="false">
+class Punto {
+//por omisión los miembros son 'private' para que sólo
+//se puedan modificar desde la propia clase.
+private:
+        // Variable miembro privada
+        int x;
+        int y;
+public:
+        // Constructor
+        Punto();
+        // Destructor
+        ~Punto();
+        // Funciones miembro o métodos
+        int ObtenerX();
+        int ObtenerY();
+};
+        </code></pre>
+</section>
+<section>
+    <h2>Constructor</h2>
+    Son unos métodos especiales que se ejecutan automáticamente al crear un objeto de la clase. En su declaración no se
+    especifica el tipo de dato que devuelven, y poseen el mismo nombre que la clase a la que pertenecen. Al igual que
+    otros métodos, puede haber varios constructores sobrecargados, aunque no pueden existir constructores virtuales.
+</section>
+<section>
+    <h2>Destructor</h2>
+    Los destructores son funciones miembro especiales llamadas automáticamente en la ejecución del programa, y por tanto
+    no tienen por qué ser llamadas explícitamente por el programador. Sus principales cometidos son:
+    <ul>
+        <li>
+            Liberar los recursos computacionales que el objeto de dicha clase haya adquirido en tiempo de ejecución al
+            expirar éste.
+        </li>
+        <li>
+            Quitar los vínculos que pudiesen tener otros recursos u objetos con éste.
+        </li>
+    </ul>
+    Es llamado solo cuando la instancia del objeto termina, o cuando se realiza un <b>delete</b> del objeto.
+
+</section>
+
+
+<section>
+    <h2>Archivo .h</h2>
+    <p>En el archivo .h se escribe el prototipo de la clase</p>
+    <pre><code class="hljs c++" data-trim contenteditable spellcheck="false">
+class Punto {
+private:
+        int x;
+        int y;
+public:
+        Punto();
+        ~Punto();
+        int ObtenerX();
+        int ObtenerY();
+};
+        </code></pre>
+</section>
+<section>
+    <h2>Archivo .cpp</h2>
+    <p>En el archivo .cpp se escribe la implementación de los metodos</p>
+    <pre><code class="hljs c++" data-trim contenteditable spellcheck="false">
+Punto::Punto(){
+    x=0;
+    y=0;
+}
+int Punto::ObtenerX(){
+        return x;
+}
+int Punto::ObtenerY(){
+        return y;
+}
+        </code></pre>
+</section>
+<section>
+    <h2>Palabra clave <b>this</b></h2>
+    <p>Es un puntero que hace referencia al propio objeto. Es utilizado para poder acceder a los atributos de la
+        instancia del objeto al cual pertenece el método</p>
+    <p>Comúnmente puede ser obviado su uso, ya que llamando directamente al atributo también podemos acceder</p>
+    <pre><code class="hljs c++" data-trim contenteditable spellcheck="false">
+int Punto::EscribirY(int val){
+        y = val; // no hace falta utilizar this
+}
+int Punto::EscribirX(int x){
+        this->x = x;
+// Como x ahora es una variable dentro de la función, para acceder al atributo
+// utilizo el puntero this
+}
+        </code></pre>
+</section>
+<section>
+    <h1>A programar</h1>
+</section>
+
+</div>
+</div>
+
+<script src="lib/js/head.min.js"></script>
+<script src="js/reveal.js"></script>
+
+<script>
+    // More info https://github.com/hakimel/reveal.js#configuration
+    Reveal.initialize({
+        history: true,
+
+        // More info https://github.com/hakimel/reveal.js#dependencies
+        dependencies: [
+            {src: 'plugin/markdown/marked.js'},
+            {src: 'plugin/markdown/markdown.js'},
+            {src: 'plugin/notes/notes.js', async: true},
+            {src: 'plugin/math/math.js', async: true},
+            {
+                src: 'plugin/highlight/highlight.js', async: true, callback: function () {
+                    hljs.initHighlightingOnLoad();
+                }
+            }
+        ]
+    });
+</script>
+</body>
+</html>
+
