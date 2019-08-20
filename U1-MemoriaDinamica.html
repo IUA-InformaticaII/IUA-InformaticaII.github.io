@@ -226,7 +226,7 @@ int main(){
 </script></section><section  data-markdown><script type="text/template">
 ## Matrices
 
-Las matrices son arreglos de arreglos, pero mediante el uso de memoria dinamica, cada arreglo puede tener tamaño distinto.
+Las matrices son arreglos de arreglos, pero mediante el uso de memoria dinámica, cada arreglo puede tener tamaño distinto.
 Luego, es mas general que una matriz.
 Debo pedir memoria para el arreglo de arreglos y para cada uno de esos arreglos
 
@@ -264,6 +264,8 @@ int main(){
 
 Hay dos funciones mas que nos simplifican el uso de memoria con malloc
 
+</script></section><section  data-markdown><script type="text/template">
+
 ### Calloc
 
 Similar a Malloc, pero llena de 0 la memoria solicitada:
@@ -271,8 +273,12 @@ Similar a Malloc, pero llena de 0 la memoria solicitada:
 <pre><code class="hljs c++" data-trim>
     void* calloc(cant_elementos, tamaño);
 </code></pre>
+
+</script></section><section  data-markdown><script type="text/template">
 ### Realloc
-Aumenta el tamaño de memoria asignado anteriormente y copia el contenido inicial al nuevo.
+
+Aumenta el tamaño 
+de memoria asignado anteriormente y copia el contenido inicial al nuevo.
 <pre><code class="hljs c++" data-trim>
     void* realloc(puntero_anterior, tamaño);
 </code></pre>
@@ -280,7 +286,6 @@ Aumenta el tamaño de memoria asignado anteriormente y copia el contenido inicia
 </script></section></div>
     </div>
 
-    <script src="./lib/js/head.min.js"></script>
     <script src="./js/reveal.js"></script>
 
     <script>
@@ -299,7 +304,6 @@ Aumenta el tamaño de memoria asignado anteriormente y copia el contenido inicia
 
       // Optional libraries used to extend on reveal.js
       var deps = [
-        { src: './lib/js/classList.js', condition: function() { return !document.body.classList; } },
         { src: './plugin/markdown/marked.js', condition: function() { return !!document.querySelector('[data-markdown]'); } },
         { src: './plugin/markdown/markdown.js', condition: function() { return !!document.querySelector('[data-markdown]'); } },
         { src: './plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
