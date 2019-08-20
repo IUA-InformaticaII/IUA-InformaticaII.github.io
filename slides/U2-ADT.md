@@ -1,11 +1,68 @@
-<include src="../templates/header.html"
-         titulo="TDA"
-         descripcion="Tipos de datos Abstractos">
-    Ricardo Martin Marcucci
-</include>
+<!doctype html>
+<html lang="es">
+<head>
 
-<include src="../templates/slide1.html" titulo="Tipos de datos Abstractos">
-</include>
+    <link href='images/code.ico' rel='shortcut icon' type='image/x-icon'>
+    <meta charset="utf-8">
+
+    <title>TDA</title>
+    <meta name="description" content="Tipos de datos Abstractos">
+    <meta name="author" content="
+    Ricardo Martin Marcucci
+">
+
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/reveal.css">
+    <link rel="stylesheet" href="css/theme/league.css" id="theme">
+
+    <link rel="icon" href="https://www.iua.edu.ar/wp-content/uploads/sites/6/2016/12/favicon.png" sizes="32x32" />
+    <link rel="icon" href="https://www.iua.edu.ar/wp-content/uploads/sites/6/2016/12/favicon.png" sizes="192x192" />
+    <link rel="apple-touch-icon-precomposed" href="https://www.iua.edu.ar/wp-content/uploads/sites/6/2016/12/favicon.png" />
+
+    <!-- Theme used for syntax highlighting of code -->
+    <link rel="stylesheet" href="lib/css/zenburn.css">
+    <link rel="stylesheet" href="css/filminas.css">
+    <script src="js/JSCPP.es5.min.js"></script>
+    <script src="js/runcpp.js"></script>
+
+    <!-- Printing and PDF exports -->
+    <script>
+        var link = document.createElement( 'link' );
+        link.rel = 'stylesheet';
+        link.type = 'text/css';
+        link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+        document.getElementsByTagName( 'head' )[0].appendChild( link );
+    </script>
+
+    <!--[if lt IE 9]>
+    <script src="lib/js/html5shiv.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+
+<div class="reveal">
+
+    <!-- Any section element inside of this container is displayed as a slide -->
+    <div class="slides">
+
+
+<section>
+    <h1>Tipos de datos Abstractos</h1>
+    
+
+    <p>
+        <small>Created by
+            <a href="https://t.me/rmarku" target="_blank">
+                <i class="fab fa-telegram-plane"></i>rmarku
+            </a>
+        </small>
+    </p>
+</section>
+
 
 <section>
     <h2>¿Qué es la Información?</h2>
@@ -286,4 +343,31 @@ int Punto::EscribirX(int x){
     <h1>A programar</h1>
 </section>
 
-<include src="../templates/footer.html"></include>
+</div>
+</div>
+
+<script src="lib/js/head.min.js"></script>
+<script src="js/reveal.js"></script>
+
+<script>
+    // More info https://github.com/hakimel/reveal.js#configuration
+    Reveal.initialize({
+        history: true,
+
+        // More info https://github.com/hakimel/reveal.js#dependencies
+        dependencies: [
+            {src: 'plugin/markdown/marked.js'},
+            {src: 'plugin/markdown/markdown.js'},
+            {src: 'plugin/notes/notes.js', async: true},
+            {src: 'plugin/math/math.js', async: true},
+            {
+                src: 'plugin/highlight/highlight.js', async: true, callback: function () {
+                    hljs.initHighlightingOnLoad();
+                }
+            }
+        ]
+    });
+</script>
+</body>
+</html>
+

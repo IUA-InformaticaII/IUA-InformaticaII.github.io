@@ -31,6 +31,7 @@ build/Release
 node_modules
 bower_components
 jspm_packages
+_static
 
 # Optional npm cache directory
 .npm
@@ -40,4 +41,3 @@ jspm_packages
 .idea
 build
 .publish
-/.publish/
