@@ -9,13 +9,13 @@
     <link rel="stylesheet" href="./css/theme/black.css" id="theme" />
     <link rel="stylesheet" href="./css/highlight/zenburn.css" />
     <link rel="stylesheet" href="./css/print/paper.css" type="text/css" media="print" />
-    <link rel="stylesheet" href="./_assets/slides/css/filminas.css" />
+    <link rel="stylesheet" href="./static/slides/css/filminas.css" />
 
   </head>
   <body>
     <div class="reveal">
       <div class="slides"><section  data-markdown><script type="text/template">
-# Recursividad</h1>
+# Recursividad
     
 
 <p>
@@ -61,19 +61,19 @@ Una función que se llama a si misma.
 </script></section><section  data-markdown><script type="text/template">
 ### Ejemplo
 ## Factorial
-<h1 style="font-size: 5em">n!</h1>
+<h1 style="font-size: 5em">n!
 <p>Plantiemos una solución.</p>
 
 </script></section><section  data-markdown><script type="text/template">
 ## Ejemplo: Factorial
-<h1 style="font-size: 2.5em">5! = 5 * 4 * 3 * 2 * 1 </h1>
-<h1 style="font-size: 2.5em">5! = 5 *(4 * 3 * 2 * 1)</h1>
-<h1 style="font-size: 2.5em">4! = 4 * 3 * 2 * 1</h1>
-<h1 style="font-size: 2.5em">5! = 5 * 4!</h1>
+<h1 style="font-size: 2.5em">5! = 5 * 4 * 3 * 2 * 1 
+<h1 style="font-size: 2.5em">5! = 5 *(4 * 3 * 2 * 1)
+<h1 style="font-size: 2.5em">4! = 4 * 3 * 2 * 1
+<h1 style="font-size: 2.5em">5! = 5 * 4!
 
 </script></section><section  data-markdown><script type="text/template">
 ## Ejemplo: Factorial
-# N! = N * (N-1)!</h1>
+# N! = N * (N-1)!
 
 
 
@@ -94,11 +94,11 @@ Hay solo un problema
 
 </script></section><section  data-markdown><script type="text/template">
 ## Ejemplo: Factorial
-<h1 style="font-size: 2em">1! = 1 </h1>
-<h1 style="font-size: 2em">2! = 2 * 1! = 2</h1>
-<h1 style="font-size: 2em">3! = 3 * 2! = 6</h1>
-<h1 style="font-size: 2em">4! = 4 * 3! = 24</h1>
-<h1 style="font-size: 2em">5! = 5 * 3! = 120</h1>
+<h1 style="font-size: 2em">1! = 1 
+<h1 style="font-size: 2em">2! = 2 * 1! = 2
+<h1 style="font-size: 2em">3! = 3 * 2! = 6
+<h1 style="font-size: 2em">4! = 4 * 3! = 24
+<h1 style="font-size: 2em">5! = 5 * 3! = 120
 
 
 
@@ -188,9 +188,9 @@ para que resuelva el problema. (llamada recursiva)
 </script></section><section  data-markdown><script type="text/template">
 ### Ejemplo Potencia
 
-<h1 style="font-size: 2.5em">2<sup>4</sup> =2 * 2 * 2 * 2 </h1>
-<h1 style="font-size: 2.5em">2<sup>4</sup> = 2 * ( 2 * 2 * 2 ) </h1>
-<h1 style="font-size: 2.5em">2<sup>4</sup> = 2 x 2<sup>3</sup></h1>
+<h1 style="font-size: 2.5em">2<sup>4</sup> =2 * 2 * 2 * 2 
+<h1 style="font-size: 2.5em">2<sup>4</sup> = 2 * ( 2 * 2 * 2 ) 
+<h1 style="font-size: 2.5em">2<sup>4</sup> = 2 x 2<sup>3</sup>
 
 
 
@@ -302,8 +302,8 @@ int main(){
       var options = extend(defaultOptions, {"controls":true,"progress":true,"slideNumber":true}, queryOptions);
     </script>
 
-    <script src="./_assets/slides/js/pruebas.js"></script>
-    <script src="./_assets/slides/js/init.js"></script>
+    <script src="./static/slides/js/pruebas.js"></script>
+    <script src="./static/slides/js/init.js"></script>
 
     <script>
       Reveal.initialize(options);
