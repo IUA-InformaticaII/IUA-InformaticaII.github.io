@@ -7,7 +7,7 @@ before_script:
   - npm install -g reveal-md
 
 script:
-  - reveal-md slides/ --static build
+  - reveal-md slides/ --static build --assets-dir static
   - cp -r slides/css build/
   - cp -r slides/js build/
 # - cp -r slides/ejemplos build/
