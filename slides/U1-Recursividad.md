@@ -1,5 +1,5 @@
 
-# Recursividad</h1>
+# Recursividad
     
 
 <p>
@@ -45,19 +45,19 @@ Una función que se llama a si misma.
 ---
 ### Ejemplo
 ## Factorial
-<h1 style="font-size: 5em">n!</h1>
+<h1 style="font-size: 5em">n!
 <p>Plantiemos una solución.</p>
 
 ---
 ## Ejemplo: Factorial
-<h1 style="font-size: 2.5em">5! = 5 * 4 * 3 * 2 * 1 </h1>
-<h1 style="font-size: 2.5em">5! = 5 *(4 * 3 * 2 * 1)</h1>
-<h1 style="font-size: 2.5em">4! = 4 * 3 * 2 * 1</h1>
-<h1 style="font-size: 2.5em">5! = 5 * 4!</h1>
+<h1 style="font-size: 2.5em">5! = 5 * 4 * 3 * 2 * 1 
+<h1 style="font-size: 2.5em">5! = 5 *(4 * 3 * 2 * 1)
+<h1 style="font-size: 2.5em">4! = 4 * 3 * 2 * 1
+<h1 style="font-size: 2.5em">5! = 5 * 4!
 
 ---
 ## Ejemplo: Factorial
-# N! = N * (N-1)!</h1>
+# N! = N * (N-1)!
 
 
 
@@ -78,11 +78,11 @@ Hay solo un problema
 
 ---
 ## Ejemplo: Factorial
-<h1 style="font-size: 2em">1! = 1 </h1>
-<h1 style="font-size: 2em">2! = 2 * 1! = 2</h1>
-<h1 style="font-size: 2em">3! = 3 * 2! = 6</h1>
-<h1 style="font-size: 2em">4! = 4 * 3! = 24</h1>
-<h1 style="font-size: 2em">5! = 5 * 3! = 120</h1>
+<h1 style="font-size: 2em">1! = 1 
+<h1 style="font-size: 2em">2! = 2 * 1! = 2
+<h1 style="font-size: 2em">3! = 3 * 2! = 6
+<h1 style="font-size: 2em">4! = 4 * 3! = 24
+<h1 style="font-size: 2em">5! = 5 * 3! = 120
 
 
 
@@ -172,9 +172,9 @@ para que resuelva el problema. (llamada recursiva)
 ---
 ### Ejemplo Potencia
 
-<h1 style="font-size: 2.5em">2<sup>4</sup> =2 * 2 * 2 * 2 </h1>
-<h1 style="font-size: 2.5em">2<sup>4</sup> = 2 * ( 2 * 2 * 2 ) </h1>
-<h1 style="font-size: 2.5em">2<sup>4</sup> = 2 x 2<sup>3</sup></h1>
+<h1 style="font-size: 2.5em">2<sup>4</sup> =2 * 2 * 2 * 2 
+<h1 style="font-size: 2.5em">2<sup>4</sup> = 2 * ( 2 * 2 * 2 ) 
+<h1 style="font-size: 2.5em">2<sup>4</sup> = 2 x 2<sup>3</sup>
 
 
 

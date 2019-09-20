@@ -1,808 +1,762 @@
-<!doctype html>
-<html lang="es">
-<head>
-
-    <link href='images/code.ico' rel='shortcut icon' type='image/x-icon'>
-    <meta charset="utf-8">
-
-    <title>Ordenamiento QuickSort</title>
-    <meta name="description" content="Ordenamiento QuickSort">
-    <meta name="author" content="
-    Ricardo Martin Marcucci
-">
-
-    <meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/reveal.css">
-    <link rel="stylesheet" href="css/theme/league.css" id="theme">
-
-    <link rel="icon" href="https://www.iua.edu.ar/wp-content/uploads/sites/6/2016/12/favicon.png" sizes="32x32" />
-    <link rel="icon" href="https://www.iua.edu.ar/wp-content/uploads/sites/6/2016/12/favicon.png" sizes="192x192" />
-    <link rel="apple-touch-icon-precomposed" href="https://www.iua.edu.ar/wp-content/uploads/sites/6/2016/12/favicon.png" />
-
-    <!-- Theme used for syntax highlighting of code -->
-    <link rel="stylesheet" href="lib/css/zenburn.css">
-    <link rel="stylesheet" href="css/filminas.css">
-    <script src="js/JSCPP.es5.min.js"></script>
-    <script src="js/runcpp.js"></script>
-
-    <!-- Printing and PDF exports -->
-    <script>
-        var link = document.createElement( 'link' );
-        link.rel = 'stylesheet';
-        link.type = 'text/css';
-        link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
-        document.getElementsByTagName( 'head' )[0].appendChild( link );
-    </script>
-
-    <!--[if lt IE 9]>
-    <script src="lib/js/html5shiv.js"></script>
-    <![endif]-->
-</head>
-
-<body>
-
-<div class="reveal">
-
-    <!-- Any section element inside of this container is displayed as a slide -->
-    <div class="slides">
-
-
-<section>
-    <h1>Ordenamiento QuickSort</h1>
+---
+title: QuickSort
+theme: black
+slideNumber: true
+---
+# Ordenamiento QuickSort
     
+<small>Created by
+    <a href="https://t.me/rmarku" target="_blank">
+        <i class="fab fa-telegram-plane"></i>rmarku
+    </a>
+</small>
 
-    <p>
-        <small>Created by
-            <a href="https://t.me/rmarku" target="_blank">
-                <i class="fab fa-telegram-plane"></i>rmarku
-            </a>
-        </small>
-    </p>
-</section>
+---
+## Ordenamiento
+
+<img src="images/ordenamiento.png" alt="" class="noBorder">
+<aside class="notes">
+    Impacto en la vida diaraia<br>
+    Ejemplo Guia telefónica desordenada<br>
+    Relación busqueda y ordenamiento<br>
+</aside>
+
+---
+## Metodo Quicksort
+
+<p>Sea un Arreglo y Largo el número de elementos del arreglo
+    que debe ser ordenado. Elegir un elemento A de una
+    posición específica en el arreglo (ej. A = Arreglo[0]).
+    Suponiendo que A está en la posición j entonces:</p>
+
+* Cada uno de los elementos en las posiciones de 0 a j-1 es 1 es menor o igual que A
+        
+* Cada uno de los elementos en las posiciones j+1 a n-1 es 1 es mayor o igual que A
+        
 
 
-<section>
-    <h2>Ordenamiento</h2>
-    <img src="images/ordenamiento.png" alt="" class="noBorder">
-    <aside class="notes">
-        Impacto en la vida diaraia<br>
-        Ejemplo Guia telefónica desordenada<br>
-        Relación busqueda y ordenamiento<br>
-    </aside>
-</section>
-<section>
-    <h2>Metodo Quicksort</h2>
-    <p>Sea un Arreglo y Largo el número de elementos del arreglo
-        que debe ser ordenado. Elegir un elemento A de una
-        posición específica en el arreglo (ej. A = Arreglo[0]).
-        Suponiendo que A está en la posición j entonces:</p>
-    <ul>
-        <li>Cada uno de los elementos en las posiciones de 0 a
-            j-1 es 1 es menor o igual que A
-        </li>
-        <li>
-            Cada uno de los elementos en las posiciones j+1 a n-1 es 1 es mayor o igual que A
-        </li>
-    </ul>
-</section>
-<section>
-    <section>
-        <h2>Ejemplo</h2>
-        <p>Datos del arreglo</p>
-        <table>
-            <tr class="dato-qs">
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-            <tr class="dato-qs">
-                <td>4</td>
-                <td>5</td>
-                <td>2</td>
-                <td>3</td>
-                <td>6</td>
-                <td>1</td>
-            </tr>
-        </table>
-    </section>
-    <section>
-        <h2>Ejemplo</h2>
-        <p>Elegimos el pivote</p>
-        <table>
-            <tr class="desc-qs">
-                <td>Piv</td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-            </tr>
-            <tr class="dato-qs">
-                <td>4</td>
-                <td>5</td>
-                <td>2</td>
-                <td>3</td>
-                <td>6</td>
-                <td>1</td>
-            </tr>
-        </table>
-    </section>
-    <section>
-        <h2>Ejemplo</h2>
-        <p>Colocamos los punteros Izquierda y Derecha.<br>
-            Podemos comenzar a buscar desde la derecha y llenar el vacio.</p>
-        <table>
-            <tr class="desc-qs">
-                <td>I</td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td>D</td>
-            </tr>
-            <tr class="dato-qs">
-                <td>&#9634;</td>
-                <td>5</td>
-                <td>2</td>
-                <td>3</td>
-                <td>6</td>
-                <td>1</td>
-            </tr>
-        </table>
-        pivote = 4
-    </section>
-    <section>
-        <h2>Ejemplo</h2>
-        <p>D > Piv? (1 > 4)<br>
-        </p>
-        <table>
-            <tr class="desc-qs">
-                <td>I</td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td>D</td>
-            </tr>
-            <tr class="dato-qs">
-                <td>&#9634;</td>
-                <td>5</td>
-                <td>2</td>
-                <td>3</td>
-                <td>6</td>
-                <td>1</td>
-            </tr>
-        </table>
-        pivote = 4
-    </section>
-    <section>
-        <h2>Ejemplo</h2>
-        <p>Muevo el Der al vacio<br>
-        </p>
-        <table>
-            <tr class="desc-qs">
-                <td>I</td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td>D</td>
-            </tr>
-            <tr class="dato-qs">
-                <td>1</td>
-                <td>5</td>
-                <td>2</td>
-                <td>3</td>
-                <td>6</td>
-                <td>&#9634;</td>
-            </tr>
-        </table>
-        pivote = 4
-    </section>
-    <section>
-        <h2>Ejemplo</h2>
-        <p>Incremento el Izq<br>
-            I > Piv? ( 5 > 4 )
-        </p>
-        <table>
-            <tr class="desc-qs">
-                <td></td>
-                <td>I</td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td>D</td>
-            </tr>
-            <tr class="dato-qs">
-                <td>1</td>
-                <td>5</td>
-                <td>2</td>
-                <td>3</td>
-                <td>6</td>
-                <td>&#9634;</td>
-            </tr>
-        </table>
-        pivote = 4
-    </section>
-    <section>
-        <h2>Ejemplo</h2>
-        <p>Muevo el dato Izq al vacio<br>
-            Comienzo a buscar de nuevo desde la derecha
-        </p>
-        <table>
-            <tr class="desc-qs">
-                <td></td>
-                <td>I</td>
-                <td></td>
-                <td></td>
-                <td>D</td>
-                <td></td>
-            </tr>
-            <tr class="dato-qs">
-                <td>1</td>
-                <td>&#9634;</td>
-                <td>2</td>
-                <td>3</td>
-                <td>6</td>
-                <td>5</td>
-            </tr>
-        </table>
-        pivote = 4
-    </section>
-    <section>
-        <h2>Ejemplo</h2>
-        <p>D > Piv? ( 6 > 4 )<br>
-            Como es mayor, está en el lugar correcto
-        </p>
-        <table>
-            <tr class="desc-qs">
-                <td></td>
-                <td>I</td>
-                <td></td>
-                <td></td>
-                <td>D</td>
-                <td></td>
-            </tr>
-            <tr class="dato-qs">
-                <td>1</td>
-                <td>&#9634;</td>
-                <td>2</td>
-                <td>3</td>
-                <td>6</td>
-                <td>5</td>
-            </tr>
-        </table>
-        pivote = 4
-    </section>
-    <section>
-        <h2>Ejemplo</h2>
-        <p>Muevo el derecho y comparo nuevamente<br>
-            3 > 4?
-        </p>
-        <table>
-            <tr class="desc-qs">
-                <td></td>
-                <td>I</td>
-                <td></td>
-                <td>D</td>
-                <td></td>
-                <td></td>
-            </tr>
-            <tr class="dato-qs">
-                <td>1</td>
-                <td>&#9634;</td>
-                <td>2</td>
-                <td>3</td>
-                <td>6</td>
-                <td>5</td>
-            </tr>
-        </table>
-        pivote = 4
-    </section>
-    <section>
-        <h2>Ejemplo</h2>
-        <p>Muevo el 3 al valor vacio<br>
-        </p>
-        <table>
-            <tr class="desc-qs">
-                <td></td>
-                <td>I</td>
-                <td></td>
-                <td>D</td>
-                <td></td>
-                <td></td>
-            </tr>
-            <tr class="dato-qs">
-                <td>1</td>
-                <td>3</td>
-                <td>2</td>
-                <td>&#9634;</td>
-                <td>6</td>
-                <td>5</td>
-            </tr>
-        </table>
-        pivote = 4
-    </section>
-    <section>
-        <h2>Ejemplo</h2>
-        <p>Incremento el Izq y veo si corresponde<br>
-            2 > 4?
-        </p>
-        <table>
-            <tr class="desc-qs">
-                <td></td>
-                <td></td>
-                <td>I</td>
-                <td>D</td>
-                <td></td>
-                <td></td>
-            </tr>
-            <tr class="dato-qs">
-                <td>1</td>
-                <td>3</td>
-                <td>2</td>
-                <td>&#9634;</td>
-                <td>6</td>
-                <td>5</td>
-            </tr>
-        </table>
-        pivote = 4
-    </section>
-    <section>
-        <h2>Ejemplo</h2>
-        <p>Incremento el Izq y veo si corresponde<br>
-            D == I, Encontré el lugar del 4
-        </p>
-        <table>
-            <tr class="desc-qs">
-                <td></td>
-                <td></td>
-                <td></td>
-                <td>I<br>D</td>
-                <td></td>
-                <td></td>
-            </tr>
-            <tr class="dato-qs">
-                <td>1</td>
-                <td>3</td>
-                <td>2</td>
-                <td>&#9634;</td>
-                <td>6</td>
-                <td>5</td>
-            </tr>
-        </table>
-        pivote = 4
-    </section>
-    <section>
-        <h2>Ejemplo</h2>
-        <p>Incremento el Izq y veo si corresponde<br>
-            D == I, Encontré el lugar del 4
-        </p>
-        <table>
-            <tr class="desc-qs">
-                <td></td>
-                <td></td>
-                <td></td>
-                <td>I<br>D</td>
-                <td></td>
-                <td></td>
-            </tr>
-            <tr class="dato-qs">
-                <td>1</td>
-                <td>3</td>
-                <td>2</td>
-                <td>&#9634;</td>
-                <td>6</td>
-                <td>5</td>
-            </tr>
-        </table>
-        pivote = 4
-    </section>
-    <section>
-        <h2>Ejemplo</h2>
-        <p>El 4 está en su lugar, los valores mayores están a su derecha y los
-            menores a su Izquierda.
-        </p>
-        <table>
-            <tr class="desc-qs">
-                <td></td>
-                <td></td>
-                <td></td>
-                <td>I<br>D</td>
-                <td></td>
-                <td></td>
-            </tr>
-            <tr class="dato-qs">
-                <td>1</td>
-                <td>3</td>
-                <td>2</td>
-                <td>4</td>
-                <td>6</td>
-                <td>5</td>
-            </tr>
-        </table>
-        pivote = 4
-    </section>
-    <section>
-        <h2>Ejemplo</h2>
-        <p>Tenemos 2 arreglos desordenados
-        </p>
-        <table>
-            <tr class="desc-qs">
-                <td style="border-left: solid 1px">I</td>
-                <td></td>
-                <td style="border-right: solid 2px;">D</td>
-                <td style="border-right: solid 1px;border-left: solid 1px;border-bottom:none;"></td>
-                <td>I</td>
-                <td style="border-right: solid 2px;">D</td>
-            </tr>
-            <tr class="dato-qs">
-                <td>1</td>
-                <td>3</td>
-                <td>2</td>
-                <td>4</td>
-                <td>6</td>
-                <td>5</td>
-            </tr>
-        </table>
-        pivote = 4
-    </section>
-    <section>
-        <h2>Ejemplo</h2>
+---
+## Ejemplo
 
-        <table>
-            <tr class="desc-qs">
-                <td style="border-left: solid 1px">I</td>
-                <td></td>
-                <td style="border-right: solid 2px;">D</td>
-                <td style="border-right: solid 1px;border-left: solid 1px;border-bottom:none;"></td>
-                <td>I</td>
-                <td style="border-right: solid 2px;">D</td>
-            </tr>
-            <tr class="dato-qs">
-                <td>&#9634;</td>
-                <td>3</td>
-                <td>2</td>
-                <td>4</td>
-                <td>6</td>
-                <td>5</td>
-            </tr>
-        </table>
-        pivote = 1
-    </section>
-    <section>
-        <h2>Ejemplo</h2>
-        <p>1 > 2?</p>
-        <table>
-            <tr class="desc-qs">
-                <td style="border-left: solid 1px">I</td>
-                <td></td>
-                <td style="border-right: solid 2px;">D</td>
-                <td style="border-right: solid 1px;border-left: solid 1px;border-bottom:none;"></td>
-                <td>I</td>
-                <td style="border-right: solid 2px;">D</td>
-            </tr>
-            <tr class="dato-qs">
-                <td>&#9634;</td>
-                <td>3</td>
-                <td>2</td>
-                <td>4</td>
-                <td>6</td>
-                <td>5</td>
-            </tr>
-        </table>
-        pivote = 1
-    </section>
-    <section>
-        <h2>Ejemplo</h2>
-        <p>1 > 3?</p>
-        <table>
-            <tr class="desc-qs">
-                <td style="border-left: solid 1px">I</td>
-                <td>D</td>
-                <td style="border-right: solid 2px;"></td>
-                <td style="border-right: solid 1px;border-left: solid 1px;border-bottom:none;"></td>
-                <td>I</td>
-                <td style="border-right: solid 2px;">D</td>
-            </tr>
-            <tr class="dato-qs">
-                <td>&#9634;</td>
-                <td>3</td>
-                <td>2</td>
-                <td>4</td>
-                <td>6</td>
-                <td>5</td>
-            </tr>
-        </table>
-        pivote = 1
-    </section>
-    <section>
-        <h2>Ejemplo</h2>
-        <p>El 1 Está en su posición</p>
-        <table>
-            <tr class="desc-qs">
-                <td style="border-left: solid 1px">I<br>D</td>
-                <td></td>
-                <td style="border-right: solid 2px;"></td>
-                <td style="border-right: solid 1px;border-left: solid 1px;border-bottom:none;"></td>
-                <td>I</td>
-                <td style="border-right: solid 2px;">D</td>
-            </tr>
-            <tr class="dato-qs">
-                <td>1</td>
-                <td>3</td>
-                <td>2</td>
-                <td>4</td>
-                <td>6</td>
-                <td>5</td>
-            </tr>
-        </table>
-        pivote =
-    </section>
-    <section>
-        <h2>Ejemplo</h2>
-        <p>Ahora tengo dos arreglos</p>
-        <table>
-            <tr class="desc-qs">
-                <td style="border: none;"></td>
-                <td style="border-left: solid 1px">I</td>
-                <td style="border-right: solid 2px;">D</td>
-                <td style="border-bottom:none;"></td>
-                <td style="border-left: solid 1px">I</td>
-                <td style="border-right: solid 2px;">D</td>
-            </tr>
-            <tr class="dato-qs">
-                <td>1</td>
-                <td>3</td>
-                <td>2</td>
-                <td>4</td>
-                <td>6</td>
-                <td>5</td>
-            </tr>
-        </table>
-        pivote =
-    </section>
-    <section>
-        <h2>Ejemplo</h2>
-        <p>Ahora tengo dos arreglos</p>
-        <table>
-            <tr class="desc-qs">
-                <td style="border: none;"></td>
-                <td style="border-left: solid 1px">I</td>
-                <td style="border-right: solid 2px;">D</td>
-                <td style="border-bottom:none;"></td>
-                <td style="border-left: solid 1px">I</td>
-                <td style="border-right: solid 2px;">D</td>
-            </tr>
-            <tr class="dato-qs">
-                <td>1</td>
-                <td>&#9634;</td>
-                <td>2</td>
-                <td>4</td>
-                <td>6</td>
-                <td>5</td>
-            </tr>
-        </table>
-        pivote =3
-    </section>
-    <section>
-        <h2>Ejemplo</h2>
-        <p>3>2?</p>
-        <table>
-            <tr class="desc-qs">
-                <td style="border: none;"></td>
-                <td style="border-left: solid 1px">I</td>
-                <td style="border-right: solid 2px;">D</td>
-                <td style="border-bottom:none;"></td>
-                <td style="border-left: solid 1px">I</td>
-                <td style="border-right: solid 2px;">D</td>
-            </tr>
-            <tr class="dato-qs">
-                <td>1</td>
-                <td>&#9634;</td>
-                <td>2</td>
-                <td>4</td>
-                <td>6</td>
-                <td>5</td>
-            </tr>
-        </table>
-        pivote =3
-    </section>
-    <section>
-        <h2>Ejemplo</h2>
-        <p>3>2?</p>
-        <table>
-            <tr class="desc-qs">
-                <td style="border: none;"></td>
-                <td style="border-left: solid 1px">I</td>
-                <td style="border-right: solid 2px;">D</td>
-                <td style="border-bottom:none;"></td>
-                <td style="border-left: solid 1px">I</td>
-                <td style="border-right: solid 2px;">D</td>
-            </tr>
-            <tr class="dato-qs">
-                <td>1</td>
-                <td>2</td>
-                <td>&#9634;</td>
-                <td>4</td>
-                <td>6</td>
-                <td>5</td>
-            </tr>
-        </table>
-        pivote =3
-    </section>
-    <section>
-        <h2>Ejemplo</h2>
-        <p>3>2?</p>
-        <table>
-            <tr class="desc-qs">
-                <td style="border: none;"></td>
-                <td style="border-left: solid 1px"></td>
-                <td style="border-right: solid 2px;">I<br>D</td>
-                <td style="border-bottom:none;"></td>
-                <td style="border-left: solid 1px">I</td>
-                <td style="border-right: solid 2px;">D</td>
-            </tr>
-            <tr class="dato-qs">
-                <td>1</td>
-                <td>2</td>
-                <td>3</td>
-                <td>4</td>
-                <td>6</td>
-                <td>5</td>
-            </tr>
-        </table>
-        pivote =
-    </section>
-    <section>
-        <h2>Ejemplo</h2>
-        <p>Ordeno el ultimo arreglo</p>
-        <table>
-            <tr class="desc-qs">
-                <td style="border: none;"></td>
-                <td style="border:none;"></td>
-                <td style="border:none;"></td>
-                <td style="border-bottom:none;"></td>
-                <td style="border-left: solid 1px">I</td>
-                <td style="border-right: solid 2px;">D</td>
-            </tr>
-            <tr class="dato-qs">
-                <td>1</td>
-                <td>2</td>
-                <td>3</td>
-                <td>4</td>
-                <td>&#9634;</td>
-                <td>5</td>
-            </tr>
-        </table>
-        pivote = 6
-    </section>
-    <section>
-        <h2>Ejemplo</h2>
-        <p>5 > 6?</p>
-        <table>
-            <tr class="desc-qs">
-                <td style="border: none;"></td>
-                <td style="border:none;"></td>
-                <td style="border:none;"></td>
-                <td style="border-bottom:none;"></td>
-                <td style="border-left: solid 1px">I</td>
-                <td style="border-right: solid 2px;">D</td>
-            </tr>
-            <tr class="dato-qs">
-                <td>1</td>
-                <td>2</td>
-                <td>3</td>
-                <td>4</td>
-                <td>&#9634;</td>
-                <td>5</td>
-            </tr>
-        </table>
-        pivote = 6
-    </section>
-    <section>
-        <h2>Ejemplo</h2>
-        <p>muevo el puntero</p>
-        <table>
-            <tr class="desc-qs">
-                <td style="border: none;"></td>
-                <td style="border:none;"></td>
-                <td style="border:none;"></td>
-                <td style="border-bottom:none;"></td>
-                <td style="border-left: solid 1px"></td>
-                <td style="border-right: solid 2px;">I<br>D</td>
-            </tr>
-            <tr class="dato-qs">
-                <td>1</td>
-                <td>2</td>
-                <td>3</td>
-                <td>4</td>
-                <td>5</td>
-                <td>&#9634;</td>
-            </tr>
-        </table>
-        pivote = 6
-    </section>
-    <section>
-        <h2>Ejemplo</h2>
-        <p>D == I, guardo en el puntero el pivote</p>
-        <table>
-            <tr class="desc-qs">
-                <td style="border: none;"></td>
-                <td style="border:none;"></td>
-                <td style="border:none;"></td>
-                <td style="border-bottom:none;"></td>
-                <td style="border-left: solid 1px"></td>
-                <td style="border-right: solid 2px;">I<br>D</td>
-            </tr>
-            <tr class="dato-qs">
-                <td>1</td>
-                <td>2</td>
-                <td>3</td>
-                <td>4</td>
-                <td>5</td>
-                <td>6</td>
-            </tr>
-        </table>
-        pivote =
-    </section>
-    <section>
-        <h2>Ejemplo</h2>
-        <p>El arreglo está ordenado.</p>
-        <table>
-            <tr class="desc-qs">
-                <td style="border: none;"></td>
-                <td style="border:none;"></td>
-                <td style="border:none;"></td>
-                <td style="border:none;"></td>
-                <td style="border:none;"></td>
-                <td style="border:none;"></td>
-            </tr>
-            <tr class="dato-qs">
-                <td>1</td>
-                <td>2</td>
-                <td>3</td>
-                <td>4</td>
-                <td>5</td>
-                <td>6</td>
-            </tr>
-        </table>
-    </section>
-    <section>
-        <h3>Ejemplo Fibonacci</h3>
-        <button onclick="run(this);" style="float: right;">
-            <i class="fas fa-play"></i>
-        </button>
-        <pre><code id="code4" class="hljs c++" data-trim contenteditable spellcheck="false">
-#include &lt;iostream&gt;
+<p>Datos del arreglo</p>
+<table>
+    <tr class="dato-qs">
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr class="dato-qs">
+        <td>4</td>
+        <td>5</td>
+        <td>2</td>
+        <td>3</td>
+        <td>6</td>
+        <td>1</td>
+    </tr>
+</table>
 
-void quicksort(int a[], int primero, int ultimo) {
+---
+## Ejemplo
 
-}
+<p>Elegimos el pivote</p>
+<table>
+    <tr class="desc-qs">
+        <td>Piv</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr class="dato-qs">
+        <td>4</td>
+        <td>5</td>
+        <td>2</td>
+        <td>3</td>
+        <td>6</td>
+        <td>1</td>
+    </tr>
+</table>
 
-int main() {
-    int arreglo[8] = {5, 8, 1, 6, 2, 3, 4, 7};
-    quicksort(arreglo, 0, 7);
+---
+## Ejemplo
 
-    for (int i = 0; i < 8; i++)
-        cout << arreglo[i] << endl;
-    return 0;
-}
-</code></pre>
-        <button onclick="run(this);">
-            <i class="fas fa-play"></i>
-        </button>
-        <button onclick="sol(this);">
-            Solución
-            <pre style="display: none;">#include &lt;iostream&gt;
+<p>Colocamos los punteros Izquierda y Derecha.<br>
+    Podemos comenzar a buscar desde la derecha y llenar el vacio.</p>
+<table>
+    <tr class="desc-qs">
+        <td>I</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>D</td>
+    </tr>
+    <tr class="dato-qs">
+        <td>&#9634;</td>
+        <td>5</td>
+        <td>2</td>
+        <td>3</td>
+        <td>6</td>
+        <td>1</td>
+    </tr>
+</table>
+pivote = 4
+
+---
+## Ejemplo
+
+<p>D > Piv? (1 > 4)<br>
+</p>
+<table>
+    <tr class="desc-qs">
+        <td>I</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>D</td>
+    </tr>
+    <tr class="dato-qs">
+        <td>&#9634;</td>
+        <td>5</td>
+        <td>2</td>
+        <td>3</td>
+        <td>6</td>
+        <td>1</td>
+    </tr>
+</table>
+pivote = 4
+
+---
+## Ejemplo
+
+<p>Muevo el Der al vacio<br>
+</p>
+<table>
+    <tr class="desc-qs">
+        <td>I</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>D</td>
+    </tr>
+    <tr class="dato-qs">
+        <td>1</td>
+        <td>5</td>
+        <td>2</td>
+        <td>3</td>
+        <td>6</td>
+        <td>&#9634;</td>
+    </tr>
+</table>
+pivote = 4
+
+---
+## Ejemplo
+
+<p>Incremento el Izq<br>
+    I > Piv? ( 5 > 4 )
+</p>
+<table>
+    <tr class="desc-qs">
+        <td></td>
+        <td>I</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>D</td>
+    </tr>
+    <tr class="dato-qs">
+        <td>1</td>
+        <td>5</td>
+        <td>2</td>
+        <td>3</td>
+        <td>6</td>
+        <td>&#9634;</td>
+    </tr>
+</table>
+pivote = 4
+
+---
+## Ejemplo
+
+<p>Muevo el dato Izq al vacio<br>
+    Comienzo a buscar de nuevo desde la derecha
+</p>
+<table>
+    <tr class="desc-qs">
+        <td></td>
+        <td>I</td>
+        <td></td>
+        <td></td>
+        <td>D</td>
+        <td></td>
+    </tr>
+    <tr class="dato-qs">
+        <td>1</td>
+        <td>&#9634;</td>
+        <td>2</td>
+        <td>3</td>
+        <td>6</td>
+        <td>5</td>
+    </tr>
+</table>
+pivote = 4
+
+---
+## Ejemplo
+
+<p>D > Piv? ( 6 > 4 )<br>
+    Como es mayor, está en el lugar correcto
+</p>
+<table>
+    <tr class="desc-qs">
+        <td></td>
+        <td>I</td>
+        <td></td>
+        <td></td>
+        <td>D</td>
+        <td></td>
+    </tr>
+    <tr class="dato-qs">
+        <td>1</td>
+        <td>&#9634;</td>
+        <td>2</td>
+        <td>3</td>
+        <td>6</td>
+        <td>5</td>
+    </tr>
+</table>
+pivote = 4
+
+---
+## Ejemplo
+
+<p>Muevo el derecho y comparo nuevamente<br>
+    3 > 4?
+</p>
+<table>
+    <tr class="desc-qs">
+        <td></td>
+        <td>I</td>
+        <td></td>
+        <td>D</td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr class="dato-qs">
+        <td>1</td>
+        <td>&#9634;</td>
+        <td>2</td>
+        <td>3</td>
+        <td>6</td>
+        <td>5</td>
+    </tr>
+</table>
+pivote = 4
+
+---
+## Ejemplo
+
+<p>Muevo el 3 al valor vacio<br>
+</p>
+<table>
+    <tr class="desc-qs">
+        <td></td>
+        <td>I</td>
+        <td></td>
+        <td>D</td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr class="dato-qs">
+        <td>1</td>
+        <td>3</td>
+        <td>2</td>
+        <td>&#9634;</td>
+        <td>6</td>
+        <td>5</td>
+    </tr>
+</table>
+pivote = 4
+
+---
+## Ejemplo
+
+<p>Incremento el Izq y veo si corresponde<br>
+    2 > 4?
+</p>
+<table>
+    <tr class="desc-qs">
+        <td></td>
+        <td></td>
+        <td>I</td>
+        <td>D</td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr class="dato-qs">
+        <td>1</td>
+        <td>3</td>
+        <td>2</td>
+        <td>&#9634;</td>
+        <td>6</td>
+        <td>5</td>
+    </tr>
+</table>
+pivote = 4
+
+---
+## Ejemplo
+
+<p>Incremento el Izq y veo si corresponde<br>
+    D == I, Encontré el lugar del 4
+</p>
+<table>
+    <tr class="desc-qs">
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>I<br>D</td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr class="dato-qs">
+        <td>1</td>
+        <td>3</td>
+        <td>2</td>
+        <td>&#9634;</td>
+        <td>6</td>
+        <td>5</td>
+    </tr>
+</table>
+pivote = 4
+
+---
+## Ejemplo
+
+<p>Incremento el Izq y veo si corresponde<br>
+    D == I, Encontré el lugar del 4
+</p>
+<table>
+    <tr class="desc-qs">
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>I<br>D</td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr class="dato-qs">
+        <td>1</td>
+        <td>3</td>
+        <td>2</td>
+        <td>&#9634;</td>
+        <td>6</td>
+        <td>5</td>
+    </tr>
+</table>
+pivote = 4
+
+---
+## Ejemplo
+
+<p>El 4 está en su lugar, los valores mayores están a su derecha y los
+    menores a su Izquierda.
+</p>
+<table>
+    <tr class="desc-qs">
+        <td></td>
+        <td></td>
+        <td></td>
+        <td>I<br>D</td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr class="dato-qs">
+        <td>1</td>
+        <td>3</td>
+        <td>2</td>
+        <td>4</td>
+        <td>6</td>
+        <td>5</td>
+    </tr>
+</table>
+pivote = 4
+
+---
+## Ejemplo
+
+<p>Tenemos 2 arreglos desordenados
+</p>
+<table>
+    <tr class="desc-qs">
+        <td style="border-left: solid 1px">I</td>
+        <td></td>
+        <td style="border-right: solid 2px;">D</td>
+        <td style="border-right: solid 1px;border-left: solid 1px;border-bottom:none;"></td>
+        <td>I</td>
+        <td style="border-right: solid 2px;">D</td>
+    </tr>
+    <tr class="dato-qs">
+        <td>1</td>
+        <td>3</td>
+        <td>2</td>
+        <td>4</td>
+        <td>6</td>
+        <td>5</td>
+    </tr>
+</table>
+pivote = 4
+
+---
+## Ejemplo
+
+
+<table>
+    <tr class="desc-qs">
+        <td style="border-left: solid 1px">I</td>
+        <td></td>
+        <td style="border-right: solid 2px;">D</td>
+        <td style="border-right: solid 1px;border-left: solid 1px;border-bottom:none;"></td>
+        <td>I</td>
+        <td style="border-right: solid 2px;">D</td>
+    </tr>
+    <tr class="dato-qs">
+        <td>&#9634;</td>
+        <td>3</td>
+        <td>2</td>
+        <td>4</td>
+        <td>6</td>
+        <td>5</td>
+    </tr>
+</table>
+pivote = 1
+
+---
+## Ejemplo
+
+<p>1 > 2?</p>
+<table>
+    <tr class="desc-qs">
+        <td style="border-left: solid 1px">I</td>
+        <td></td>
+        <td style="border-right: solid 2px;">D</td>
+        <td style="border-right: solid 1px;border-left: solid 1px;border-bottom:none;"></td>
+        <td>I</td>
+        <td style="border-right: solid 2px;">D</td>
+    </tr>
+    <tr class="dato-qs">
+        <td>&#9634;</td>
+        <td>3</td>
+        <td>2</td>
+        <td>4</td>
+        <td>6</td>
+        <td>5</td>
+    </tr>
+</table>
+pivote = 1
+
+---
+## Ejemplo
+
+<p>1 > 3?</p>
+<table>
+    <tr class="desc-qs">
+        <td style="border-left: solid 1px">I</td>
+        <td>D</td>
+        <td style="border-right: solid 2px;"></td>
+        <td style="border-right: solid 1px;border-left: solid 1px;border-bottom:none;"></td>
+        <td>I</td>
+        <td style="border-right: solid 2px;">D</td>
+    </tr>
+    <tr class="dato-qs">
+        <td>&#9634;</td>
+        <td>3</td>
+        <td>2</td>
+        <td>4</td>
+        <td>6</td>
+        <td>5</td>
+    </tr>
+</table>
+pivote = 1
+
+---
+## Ejemplo
+
+<p>El 1 Está en su posición</p>
+<table>
+    <tr class="desc-qs">
+        <td style="border-left: solid 1px">I<br>D</td>
+        <td></td>
+        <td style="border-right: solid 2px;"></td>
+        <td style="border-right: solid 1px;border-left: solid 1px;border-bottom:none;"></td>
+        <td>I</td>
+        <td style="border-right: solid 2px;">D</td>
+    </tr>
+    <tr class="dato-qs">
+        <td>1</td>
+        <td>3</td>
+        <td>2</td>
+        <td>4</td>
+        <td>6</td>
+        <td>5</td>
+    </tr>
+</table>
+pivote =
+
+---
+## Ejemplo
+
+<p>Ahora tengo dos arreglos</p>
+<table>
+    <tr class="desc-qs">
+        <td style="border: none;"></td>
+        <td style="border-left: solid 1px">I</td>
+        <td style="border-right: solid 2px;">D</td>
+        <td style="border-bottom:none;"></td>
+        <td style="border-left: solid 1px">I</td>
+        <td style="border-right: solid 2px;">D</td>
+    </tr>
+    <tr class="dato-qs">
+        <td>1</td>
+        <td>3</td>
+        <td>2</td>
+        <td>4</td>
+        <td>6</td>
+        <td>5</td>
+    </tr>
+</table>
+pivote =
+
+---
+## Ejemplo
+
+<p>Ahora tengo dos arreglos</p>
+<table>
+    <tr class="desc-qs">
+        <td style="border: none;"></td>
+        <td style="border-left: solid 1px">I</td>
+        <td style="border-right: solid 2px;">D</td>
+        <td style="border-bottom:none;"></td>
+        <td style="border-left: solid 1px">I</td>
+        <td style="border-right: solid 2px;">D</td>
+    </tr>
+    <tr class="dato-qs">
+        <td>1</td>
+        <td>&#9634;</td>
+        <td>2</td>
+        <td>4</td>
+        <td>6</td>
+        <td>5</td>
+    </tr>
+</table>
+pivote =3
+
+---
+## Ejemplo
+
+<p>3>2?</p>
+<table>
+    <tr class="desc-qs">
+        <td style="border: none;"></td>
+        <td style="border-left: solid 1px">I</td>
+        <td style="border-right: solid 2px;">D</td>
+        <td style="border-bottom:none;"></td>
+        <td style="border-left: solid 1px">I</td>
+        <td style="border-right: solid 2px;">D</td>
+    </tr>
+    <tr class="dato-qs">
+        <td>1</td>
+        <td>&#9634;</td>
+        <td>2</td>
+        <td>4</td>
+        <td>6</td>
+        <td>5</td>
+    </tr>
+</table>
+pivote =3
+
+---
+## Ejemplo
+
+<p>3>2?</p>
+<table>
+    <tr class="desc-qs">
+        <td style="border: none;"></td>
+        <td style="border-left: solid 1px">I</td>
+        <td style="border-right: solid 2px;">D</td>
+        <td style="border-bottom:none;"></td>
+        <td style="border-left: solid 1px">I</td>
+        <td style="border-right: solid 2px;">D</td>
+    </tr>
+    <tr class="dato-qs">
+        <td>1</td>
+        <td>2</td>
+        <td>&#9634;</td>
+        <td>4</td>
+        <td>6</td>
+        <td>5</td>
+    </tr>
+</table>
+pivote =3
+
+---
+## Ejemplo
+
+<p>3>2?</p>
+<table>
+    <tr class="desc-qs">
+        <td style="border: none;"></td>
+        <td style="border-left: solid 1px"></td>
+        <td style="border-right: solid 2px;">I<br>D</td>
+        <td style="border-bottom:none;"></td>
+        <td style="border-left: solid 1px">I</td>
+        <td style="border-right: solid 2px;">D</td>
+    </tr>
+    <tr class="dato-qs">
+        <td>1</td>
+        <td>2</td>
+        <td>3</td>
+        <td>4</td>
+        <td>6</td>
+        <td>5</td>
+    </tr>
+</table>
+pivote =
+
+---
+## Ejemplo
+
+<p>Ordeno el ultimo arreglo</p>
+<table>
+    <tr class="desc-qs">
+        <td style="border: none;"></td>
+        <td style="border:none;"></td>
+        <td style="border:none;"></td>
+        <td style="border-bottom:none;"></td>
+        <td style="border-left: solid 1px">I</td>
+        <td style="border-right: solid 2px;">D</td>
+    </tr>
+    <tr class="dato-qs">
+        <td>1</td>
+        <td>2</td>
+        <td>3</td>
+        <td>4</td>
+        <td>&#9634;</td>
+        <td>5</td>
+    </tr>
+</table>
+pivote = 6
+
+---
+## Ejemplo
+
+<p>5 > 6?</p>
+<table>
+    <tr class="desc-qs">
+        <td style="border: none;"></td>
+        <td style="border:none;"></td>
+        <td style="border:none;"></td>
+        <td style="border-bottom:none;"></td>
+        <td style="border-left: solid 1px">I</td>
+        <td style="border-right: solid 2px;">D</td>
+    </tr>
+    <tr class="dato-qs">
+        <td>1</td>
+        <td>2</td>
+        <td>3</td>
+        <td>4</td>
+        <td>&#9634;</td>
+        <td>5</td>
+    </tr>
+</table>
+pivote = 6
+
+---
+## Ejemplo
+
+<p>muevo el puntero</p>
+<table>
+    <tr class="desc-qs">
+        <td style="border: none;"></td>
+        <td style="border:none;"></td>
+        <td style="border:none;"></td>
+        <td style="border-bottom:none;"></td>
+        <td style="border-left: solid 1px"></td>
+        <td style="border-right: solid 2px;">I<br>D</td>
+    </tr>
+    <tr class="dato-qs">
+        <td>1</td>
+        <td>2</td>
+        <td>3</td>
+        <td>4</td>
+        <td>5</td>
+        <td>&#9634;</td>
+    </tr>
+</table>
+pivote = 6
+
+---
+## Ejemplo
+
+<p>D == I, guardo en el puntero el pivote</p>
+<table>
+    <tr class="desc-qs">
+        <td style="border: none;"></td>
+        <td style="border:none;"></td>
+        <td style="border:none;"></td>
+        <td style="border-bottom:none;"></td>
+        <td style="border-left: solid 1px"></td>
+        <td style="border-right: solid 2px;">I<br>D</td>
+    </tr>
+    <tr class="dato-qs">
+        <td>1</td>
+        <td>2</td>
+        <td>3</td>
+        <td>4</td>
+        <td>5</td>
+        <td>6</td>
+    </tr>
+</table>
+pivote =
+
+---
+## Ejemplo
+
+<p>El arreglo está ordenado.</p>
+<table>
+    <tr class="desc-qs">
+        <td style="border: none;"></td>
+        <td style="border:none;"></td>
+        <td style="border:none;"></td>
+        <td style="border:none;"></td>
+        <td style="border:none;"></td>
+        <td style="border:none;"></td>
+    </tr>
+    <tr class="dato-qs">
+        <td>1</td>
+        <td>2</td>
+        <td>3</td>
+        <td>4</td>
+        <td>5</td>
+        <td>6</td>
+    </tr>
+</table>
+
+---
+### Ejemplo Código
+
+```cpp
+#include <iostream>
 
 using namespace std;
+#define TAM 11
 
 void quicksort(int a[], int primero, int ultimo) {
     int i, j, pivote, tmp;
@@ -812,7 +766,7 @@ void quicksort(int a[], int primero, int ultimo) {
     j = ultimo;
 
     // para mostrar
-    for (int i = 0; i < 8; i++)
+    for (int i = 0; i < TAM; i++)
         cout << a[i] << " ";
     cout << " - " << primero << " " << (primero + ultimo) / 2 << " " << ultimo << endl;
 
@@ -823,7 +777,7 @@ void quicksort(int a[], int primero, int ultimo) {
             j--;
 
         if (i <= j) {
-            tmp = a[i];
+            tmp = a[i];  // Swapping
             a[i] = a[j];
             a[j] = tmp;
             i++;
@@ -832,52 +786,17 @@ void quicksort(int a[], int primero, int ultimo) {
     } while (i <= j);
 
     if (primero < j)
-        quicksort(a, primero, j);
+        quicksort(a, primero, j); // Llamada recursiva
     if (i < ultimo)
-        quicksort(a, i, ultimo);
+        quicksort(a, i, ultimo); // Llamada recursiva
 }
 
 int main() {
-    int arreglo[8] = {5, 8, 1, 6, 2, 3, 4, 7};
-    quicksort(arreglo, 0, 7);
+    int arreglo[TAM] = {5, 8, 1, 6, 2, 3, 4, 7,12,10,0};
+    quicksort(arreglo, 0, TAM-1);
 
-    for (int i = 0; i < 8; i++)
+    for (int i = 0; i < TAM; i++)
         cout << arreglo[i] << endl;
     return 0;
 }
-        </pre>
-        </button>
-        <div class="output">
-
-        </div>
-    </section>
-</section>
-
-</div>
-</div>
-
-<script src="lib/js/head.min.js"></script>
-<script src="js/reveal.js"></script>
-
-<script>
-    // More info https://github.com/hakimel/reveal.js#configuration
-    Reveal.initialize({
-        history: true,
-
-        // More info https://github.com/hakimel/reveal.js#dependencies
-        dependencies: [
-            {src: 'plugin/markdown/marked.js'},
-            {src: 'plugin/markdown/markdown.js'},
-            {src: 'plugin/notes/notes.js', async: true},
-            {src: 'plugin/math/math.js', async: true},
-            {
-                src: 'plugin/highlight/highlight.js', async: true, callback: function () {
-                    hljs.initHighlightingOnLoad();
-                }
-            }
-        ]
-    });
-</script>
-</body>
-</html>
-
+```
