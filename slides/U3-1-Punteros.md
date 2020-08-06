@@ -1,6 +1,6 @@
 ---
 title: Punteros
-theme: black
+theme: league
 slideNumber: true
 ---
 

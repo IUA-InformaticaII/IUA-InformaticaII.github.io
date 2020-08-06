@@ -1,6 +1,6 @@
 ---
 title: Pilas
-theme: black
+theme: league
 slideNumber: true
 ---
 # Pilas

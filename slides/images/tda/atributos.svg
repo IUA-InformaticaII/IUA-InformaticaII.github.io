@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   inkscape:export-ydpi="130.62857"
+   inkscape:export-xdpi="130.62857"
+   inkscape:export-filename="C:\Users\Pete\Desktop\CPT-OOP-objects_and_classes_-_attmeth.png"
+   sodipodi:docname="atributos.svg"
+   inkscape:version="1.0 (4035a4fb49, 2020-05-01)"
+   version="1.1"
+   id="svg2"
+   height="197.70534"
+   width="248.68405">
+  <defs
+     id="defs4" />
+  <sodipodi:namedview
+     inkscape:document-rotation="0"
+     inkscape:window-maximized="1"
+     inkscape:window-y="0"
+     inkscape:window-x="1920"
+     inkscape:window-height="1051"
+     inkscape:window-width="1920"
+     fit-margin-bottom="0"
+     fit-margin-right="0"
+     fit-margin-left="0"
+     fit-margin-top="0"
+     showgrid="false"
+     inkscape:current-layer="layer1"
+     inkscape:document-units="px"
+     inkscape:cy="75.053174"
+     inkscape:cx="153.99742"
+     inkscape:zoom="2.8"
+     inkscape:pageshadow="2"
+     inkscape:pageopacity="0.0"
+     borderopacity="1.0"
+     bordercolor="#666666"
+     pagecolor="#ffffff"
+     id="base" />
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     transform="translate(38.59861,-130.41808)"
+     id="layer1"
+     inkscape:groupmode="layer"
+     inkscape:label="Layer 1">
+    <rect
+       rx="30.451111"
+       ry="19.162931"
+       y="130.41808"
+       x="-38.59861"
+       height="197.70534"
+       width="248.68405"
+       id="rect3873"
+       style="fill:#cccccc;stroke-width:3;stroke-miterlimit:4;stroke-dasharray:12, 6;stroke-dashoffset:0" />
+    <text
+       id="text2987"
+       y="153.44417"
+       x="65.157074"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0%;font-family:'Liberation Sans';-inkscape-font-specification:'Liberation Sans';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
+       xml:space="preserve"><tspan
+         style="font-size:18.0136px;line-height:1.25"
+         id="tspan2991"
+         y="153.44417"
+         x="65.157074"
+         sodipodi:role="line">clase</tspan></text>
+    <rect
+       rx="7.2946172"
+       ry="4.6292439"
+       y="240.64215"
+       x="44.535873"
+       height="47.760239"
+       width="59.572708"
+       id="rect3778"
+       style="fill:#ffd42a;stroke-width:3.07405;stroke-miterlimit:4;stroke-dasharray:12.2962, 6.14808999999999983;stroke-dashoffset:0" />
+    <path
+       sodipodi:nodetypes="ccccccccccccccccc"
+       inkscape:connector-curvature="0"
+       id="path2985"
+       d="m -28.344432,299.38874 37.4806819,0 10.0909501,18.63086 17.298775,0 9.370172,-18.63086 86.493883,0 8.64939,18.63086 13.69486,0 8.6494,-18.63086 40.36379,0 0,-65.86568 -61.98728,0 -27.38974,-52.49489 -85.052297,0 -19.402437,51.0971 -36.818582,0 z"
+       style="fill:none;stroke:#000000;stroke-width:3.462;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:13.848,6.924;stroke-dashoffset:0" />
+    <text
+       id="text2987-9-4"
+       y="219.92534"
+       x="34.380161"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0%;font-family:'Liberation Sans';-inkscape-font-specification:'Liberation Sans';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
+       xml:space="preserve"><tspan
+         style="font-size:41.7077px;line-height:1.25"
+         id="tspan2991-3-35"
+         y="219.92534"
+         x="34.380161"
+         sodipodi:role="line">auto</tspan></text>
+    <text
+       id="text3004"
+       y="253.13271"
+       x="49.532684"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0%;font-family:'Liberation Sans';-inkscape-font-specification:'Liberation Sans';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
+       xml:space="preserve"><tspan
+         style="font-weight:bold;font-size:11px;line-height:1.25"
+         id="tspan3006"
+         y="253.13271"
+         x="49.532684"
+         sodipodi:role="line">atributos</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;line-height:0%;font-family:'Liberation Sans';-inkscape-font-specification:'Liberation Sans';text-align:start;letter-spacing:0px;word-spacing:0px;writing-mode:lr-tb;text-anchor:start;fill:#000000;fill-opacity:1;stroke:none"
+       x="50.661217"
+       y="262.14584"
+       id="text3780"><tspan
+         style="font-size:8.05399px;line-height:1.25"
+         id="tspan3784"
+         sodipodi:role="line"
+         x="50.661217"
+         y="262.14584">marca</tspan><tspan
+         id="tspan26"
+         style="font-size:8.05399px;line-height:1.25"
+         sodipodi:role="line"
+         x="50.661217"
+         y="272.21332">patente</tspan><tspan
+         style="font-size:8.05399px;line-height:1.25"
+         sodipodi:role="line"
+         x="50.661217"
+         y="282.28082"
+         id="tspan22">velocidad</tspan></text>
+  </g>
+</svg>

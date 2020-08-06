@@ -1,6 +1,6 @@
 ---
-title: Para comenzar
-theme: black
+title: Memoria Dinámica
+theme: league
 slideNumber: true
 ---
 

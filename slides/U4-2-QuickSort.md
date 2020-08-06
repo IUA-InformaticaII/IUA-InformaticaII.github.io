@@ -1,6 +1,6 @@
 ---
 title: QuickSort
-theme: black
+theme: league
 slideNumber: true
 ---
 # Ordenamiento QuickSort

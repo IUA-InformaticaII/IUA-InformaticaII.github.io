@@ -1,6 +1,6 @@
 ---
-title: QuickSort
-theme: black
+title: Archivos
+theme: league
 slideNumber: true
 ---
 # Tipos de datos Abstractos</h1>
