@@ -3,7 +3,7 @@ title: Archivos
 theme: league
 slideNumber: true
 ---
-# Tipos de datos Abstractos</h1>
+# Archivos
     
 
 <p>
@@ -15,51 +15,62 @@ slideNumber: true
 </p>
 
 
+---
+
+## ¿Qué son los archivos?
+
+Los archivos son datos que se guardan en un medio
+de almacenamiento no volatil. Esto quiere decir
+que estos datos no se pierden cuando la PC queda 
+sin energía
+
+<img style="height: 300px" src="images/archivos/archivos.png" alt="" class="noBorder">
+
+---
+
+## ¿Qué son los archivos?
+
+Esto nos permitirá recuperar la información
+mas adelante o transferirla a otra PC
+<img style="height: 300px" src="images/archivos/pendrive.png" alt="" class="noBorder">
+
+---
+## Organización de los archivos
+
+Los archivos se identifican con un nombre.
+Dependiendo del sistema de archivos del disco, 
+este nombre puede estar formado de varias maneras.
+
+En general, en los sitemas modernos se nombran como
+
+### NOMBRE.extencion
+
+
+---
+## Organización de los archivos
+
+Los archivos son agrupados en directorios y estos
+directorios pueden estar contenidos en otros directorios.
+
+A esto se le llama el arbol de directorios
+
+<img style="height: 300px" src="images/archivos/dirTree.png" alt="" class="cuadroBlanco">
 
 
 ---
 
-## ¿Qué es la Información?
-Unidad básica de información (BIT)
+## Rutas de archivos
 
-* 1 bit ➡️ 2 posiciones (0-1)
-* n bit ➡️ 2<sup>n</sup> posiciones
+La ruta de un archivo es la notacion en forma de
+ texto (string) que nos permite identificar a un archivo
+ en un dispositivo de almacenamiento
 
----
+Esta ruta depende del SO que estemos utilizando
 
-## Enteros Binarios
+#### Hay 2 formas de escribir las rutas
 
-#### Representación de enteros positivos
-
-00100110 ➡️ 2<sup>1</sup> + 2<sup>2</sup> + 2<sup>5</sup>=2 + 4 + 32=38
-
-#### Representación de enteros Negativos (complemento a 1)
-
-11011001 ➡️ -38<br>
-
-Podemos representar desde -2<sup>(n-1)</sup>-1 hasta 2<sup>(n-1)</sup>-1
-
-#### Representación de enteros Negativos (complemento a 2)
-11011010 ➡️ -38<br>
-<aside class="notes">
-    El primer dígito representa positivo o negativo, en caso de ser negativo se invierten todos los otros bits<br>
-    En este caso se suma un 1 a la representación del comp lemento a 1 del número negativo.
-</aside>
-
-
----
-
-## Números con coma Binarios
-
-#### Notación de punto flotante
-
-<p>El número 387,53 se representa como 38753x10<sup>-2</sup></p>
-<p>El numero consta de una MANTISA(24bits) y un EXPONENTE(8bits).<br>
-    Comunmente se utilizan 32 bits</p>
-<p>Esto nos permite representar números desde<br> 2<sup>23-1</sup> x 10<sup>127</sup> ➡️ 10<sup>-128</sup>
-
-</p>
-
+* **Absoluta**: Se escribe la ruta completa
+* **Relativa**: Se escribe en relación donde estoy actualmente
 
 ---
 
