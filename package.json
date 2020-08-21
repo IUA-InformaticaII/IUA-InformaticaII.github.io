@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "dev": "reveal-md slides -w",
     "build": "reveal-md slides --static public",
     "deploy": "npm run build && gh-pages -d public -b master"
   },
