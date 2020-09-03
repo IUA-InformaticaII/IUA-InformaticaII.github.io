@@ -31,7 +31,7 @@ sin energía
 ## ¿Qué son los archivos?
 
 Esto nos permitirá recuperar la información
-mas adelante o transferirla a otra PC
+más adelante o transferirla a otra PC
 <img style="height: 300px" src="images/archivos/pendrive.png" alt="" class="noBorder">
 
 ---
@@ -41,9 +41,9 @@ Los archivos se identifican con un nombre.
 Dependiendo del sistema de archivos del disco, 
 este nombre puede estar formado de varias maneras.
 
-En general, en los sitemas modernos se nombran como
+En general, en los sistemas modernos se nombran como
 
-### NOMBRE.extencion
+### NOMBRE.extensión
 
 
 ---
@@ -52,16 +52,15 @@ En general, en los sitemas modernos se nombran como
 Los archivos son agrupados en directorios y estos
 directorios pueden estar contenidos en otros directorios.
 
-A esto se le llama el arbol de directorios
+A esto se le llama el árbol de directorios
 
 <img style="height: 300px" src="images/archivos/dirTree.png" alt="" class="cuadroBlanco">
-
 
 ---
 
 ## Rutas de archivos
 
-La ruta de un archivo es la notacion en forma de
+La ruta de un archivo es la notación en forma de
  texto (string) que nos permite identificar a un archivo
  en un dispositivo de almacenamiento
 
@@ -74,281 +73,193 @@ Esta ruta depende del SO que estemos utilizando
 
 ---
 
-## Caracteres
+## Rutas de archivos
 
-#### ASCII
+#### Ruta Absoluta
 
-<script>
-    function ascii(txt) {
-        document.getElementById("asciiOut").innerHTML = txt.value.charCodeAt(0);
-        txt.select();
-    }
-</script>
-<input type="text" maxlength="1" size="1" onkeyup="ascii(this)"
-       style="height: 100px;font-size: 40px;width: 100px;text-align: center;">
-➡️ <span id="asciiOut" style="min-width: 100px;display: inline-block;"></span>
-<p>Interpretación de binarios en símbolos gráficos</p>
-<p>Hay distintos encoding, ASCII, UTF8, UTF16, ISO, etc...</p>
-<p>Lo mas común es utilizar 8bits, pero hay encodings de 7, 10, 16, 32 bits...</p>
-<p>El número binario 00100110, puede ser el número 38, el 0x26 o el simboló '&'</p>
-<aside class="notes">
-</aside>
+Describe la ubicación completa del archivo, desde la unidad de origen
+hasta el nombre y la extención. Se utiliza para ubicar al archivo desde cualquier
+ubicación.
 
+Ej Windows:
+```shell script
+c:\user\juan\documents\proyecto\main.cpp
+```
+
+Ej Linux:
+```shell script
+/home/juan/documents/proyecto/main.cpp
+```
 
 ---
 
-## Hardware y Softare
+## Rutas de archivos
 
-* La memoria de la PC es un conjunto de BITs</li>
-* Los bits se agrupan de a BYTEs</li>
-* Las computadoras tienen un conjunto de datos nativos</li>
-* Los lenguajes de programación de alto nivel, ayudan a simplificar el uso de tipos de datos.</li>
+#### Ruta Relativa
 
-<aside class="notes">
-</aside>
+Describe la ubicación del archivo, vista desde la ubicación actual.
 
+Ej Windows:
+```python
+# c:\user\juan\documents\proyecto\main.cpp
+# Estando en c:\user\juan\documents\otroproy\lib\
+..\..\proyecto\main.cpp
+```
+
+Ej Linux:
+```python
+# /home/juan/documents/proyecto/main.cpp
+# Estando en /home/juan/documents/otroproy/lib/
+../../proyecto/main.cpp
+```
+---
+
+## Rutas de archivos
+
+#### Ruta Relativa
+
+Se utilizan los siguientes directorios:
+
+* **..** Indica el directorio anterior
+* **.** Indica el directorio actual
+---
+## Uso de archivos en C++
+
+Hasta ahora usamos io**stream** mediante **cin** **cout**
+
+```c++
+// para leer 
+int a;
+cin >> a;
+
+// para escribir
+int a = 5
+cout << "Valor: " << a ;
+```
+---
+
+## Usos de archivos en C++
+
+#### Streams
+
+* Un stream es un flujo de datos
+* C++ posee varios stream para representar varios flujos de datos
+* Cada stream sta asociado a una clase particular, con métodos específicos
+para ese flujo de datos.
 
 ---
 
-## Tipo de Dato
-    
-* No es un dato, es lo que puede contener</li>
-* Un tipo de dato es, en esencia, un espacio en memoria con restricciones.</li>
-* Por ejemplo, el tipo "int" representa, generalmente, un conjunto de enteros de 32 bits cuyo rango va desde 
-el -2.147.483.648 al 2.147.483.647
-    </li>
-* También se restringen las operaciones que se pueden realizar en ellos.</li>
-* No confundirlos con Tipos de Datos Abstractos</li>
+## Uso de archivos en C++
 
-<aside class="notes">
-</aside>
+Para escribir/leer archivos, usaremos **fs**stream, o sus
+derivados **of**stream e **if**stream
 
+##### Distintas clases
+ 
+* **fstream**: Se utiliza para leer y escribir
+* **oftream**: Se utiliza para escribir
+* **iftream**: Se utiliza para leer
 
 ---
+## Uso de archivos en C++
 
-## Tipos de Datos Abstractos
+#### Como trabajar con archivos.
 
-<p><b>Abstracción:</b> consiste en tomar las cualidades o características que nos resulten mas relevantes de un
-    objeto, con el fin de delimitar el analisis de este
-</p>
-<img style="height: 300px" src="images/tda/lordmeowington.png" alt="" class="noBorder">
-➡️
-<img style="height: 300px" src="images/tda/dibujo-colorear-28-cat.jpg" alt="">
-
-<aside class="notes">
-    La abstracción es una tecnica para centrarse en lo importante de un problema y solucionarlo mas facilmente.
-    Ej, Mapas
-</aside>
-
-
----
-## Tipos de Datos Abstractos
-    
-* Los TDA son una abstracción de algún tipo de dato</li>
-* Formalmente se trata de un modelo matemático para tipos de datos que están definidos por su comportamiento o semántica.
-* Es un modelo matemático compuesto por una colección de operaciones definidas sobre un conjunto de datos para el modelo.
-* A nivel usuario, se pueden ver el esquema de los datos y las operaciones para manipular los elementos que lo componen.
-
-<aside class="notes">
-</aside>
-
-
+1. Primero se debe crear el objeto que manejará el archivo
+2. Conocer el nombre del archivo
+3. Abrir el archivo 
+4. Trabajar con el archivo
+  * Leer datos del archivo
+  * Escribir datos en el archivo
+  * Leer y escribir el archivo
+5. **Cerrar el archivo**
 ---
 
-## Estructuras de datos
+## Uso de archivos en C++
 
-<p>Las estructuras de datos son la implementación de un Tipo de dato abstracto.</p>
-<img style="background: white; border-radius: 10px;" src="images/tda/data.png" alt="">
-<aside class="notes">
-</aside>
+#### Como trabajar con archivos.
 
+```cpp
+#include <fstream>
 
----
-
-## Introducción a la Programación Orientada a Objetos
-<p>Es un paradigma de porgramación que es muy cercano a como expresamríamos las cosas en la vida real.</p>
-<img src="images/tda/objetos.png" alt="" class="noBorder" style="height: 300px">
-
-
----
-
-## ¿Qué es una clase?
-
-* Una clase es una plantilla para saber como crear Objetos</li>
-* Una clase es un modelo que define un conjunto de <b>Atributos</b>(el estado) y <b>Métodos</b> para operar
-con  el estado (el comportamiento)
-
-* Los objetos se crean a partir de de las clases y se llaman <b>Instancias</b></li>
-* Es una forma de abstraerse de los datos y sus operaciones y verlos como una "caja negra".</li>
-
-
-
----
-
-## ¿Qué es una clase?
-<img src="images/tda/clases-objetos.png" alt="" class="noBorder" style="height: 500px">
-
-
----
-## Clases: Atributos o Variables miembros
-    
-* Son variables definidas dentro de la clase</li>
-* Pueden ser <b>privadas</b> o <b>publicas</b></li>
-* Definen el estado del objeto</li>
-* Cada objeto tiene sus propios atributos</li>
-    
-
-
----
-
-## Clases: Métodos o Funciones miembros
-    
-* Son funciones que reciden dentro de la clase</li>
-* Pueden ser <b>privadas</b> o <b>publicas</b></li>
-* Comumente operan con los atributos del objeto</li>
-* Permiten darle comportamiento al objeto</li>
-    
-
-
----
-## Objetos
-    
-* Son una instancia creada a partir de una clase.</li>
-* Poseen <b>Identidad</b>, lo que los diferencia de otros objetos</li>
-* Existe realmente en memoría.</li>
-* Cada uno tiene sus propios atributos y sus metodos trabajan con estos atributos.</li>
-    
-
-
----
-## Clases: Sintaxis
-
-<pre><code class="hljs c++" data-trim contenteditable spellcheck="false">
-class Punto {
-//por omisión los miembros son 'private' para que sólo
-//se puedan modificar desde la propia clase.
-private:
-        // Variable miembro privada
-        int x;
-        int y;
-public:
-        // Constructor
-        Punto();
-        // Destructor
-        ~Punto();
-        // Funciones miembro o métodos
-        int ObtenerX();
-        int ObtenerY();
-};
-</code></pre>
-
-
----
-## Constructor
-
-Son unos métodos especiales que se ejecutan automáticamente al crear un objeto de la clase. En su declaración no se
-especifica el tipo de dato que devuelven, y poseen el mismo nombre que la clase a la que pertenecen. Al igual que
-otros métodos, puede haber varios constructores sobrecargados, aunque no pueden existir constructores virtuales.
-
----
-
-## Destructor
-
-Los destructores son funciones miembro especiales llamadas automáticamente en la ejecución del programa, y por tanto
-no tienen por qué ser llamadas explícitamente por el programador.
-
-Es llamado solo cuando la instancia del objeto termina, o cuando se realiza un <b>delete</b> del objeto.
-
----
-
-## Destructor
-
-Sus principales cometidos son:
-
-* Liberar los recursos computacionales que el objeto de dicha clase haya adquirido en tiempo de ejecución al  expirar éste.
-
-* Quitar los vínculos que pudiesen tener otros recursos u objetos con éste.
-
-
-
----
-
-## Archivo .h
-
-<p>En el archivo .h se escribe el prototipo de la clase</p>
-<pre><code class="hljs c++" data-trim contenteditable spellcheck="false">
-class Punto {
-private:
-        int x;
-        int y;
-public:
-        Punto();
-        ~Punto();
-        int ObtenerX();
-        int ObtenerY();
-};
-        </code></pre>
-
-
----
-
-## Archivo .cpp
-
-<p>En el archivo .cpp se escribe la implementación de los metodos</p>
-<pre><code class="hljs c++" data-trim contenteditable spellcheck="false">
-Punto::Punto(){
-    x=0;
-    y=0;
+int main(){
+    ifstream inputFile;
+    inputFile.open("archivo.txt"); // relativo a donde se ej el programa
+// operaciones de lectura...
+    inputFile.close()
+    return 0;
 }
-int Punto::ObtenerX(){
-        return x;
-}
-int Punto::ObtenerY(){
-        return y;
-}
-        </code></pre>
+```
+---
+## Uso de archivos en C++
 
+|Método|Operación|
+|------|---------|
+|open()|Abre o crea un archivo|
+|close()|Cierra un archivo ya creado|
+|get()|Lee un solo carácter del archivo|
+|put()|Escribe un solo carácter del archivo|
+|read()|Lee datos del archivo|
+|write()|Escribe datos del archivo|
 
 ---
+## Uso de archivos en C++
 
-## Palabra clave <b>this</b>
+|Modo|Significado|
+|------|---------|
+|ios::app|Modo agregar al final|
+|ios::in|Modo lectura solamente|
+|ios::out|Modo escritura solamente|
+|ios::nocreate|Fallá si no existe el archivo|
+|ios::trunc|Borra el contenido actual del archivo|
+|OTROS|...|
+---
+## Uso de archivos en C++
 
-<p style="font-size: 0.8em;">Es un puntero que hace referencia al propio objeto. Es utilizado para poder acceder a los atributos de la
-    instancia del objeto al cual pertenece el método</p>
-<p>Comúnmente puede ser obviado su uso, ya que llamando directamente al atributo también podemos acceder</p>
-<pre><code class="hljs c++" data-trim contenteditable spellcheck="false">
-int Punto::EscribirY(int val){
-        y = val; // no hace falta utilizar this
-}
-int Punto::EscribirX(int x){
-        this->x = x;
-// Como x ahora es una variable dentro de la función, para acceder al atributo
-// utilizo el puntero this
-}
-</code></pre>
+```cpp
+archivo.open("miArch.txt",ios::out|ios::nocreate); 
+```
+---
+## Uso de archivos en C++
 
+Podemos leer y escribir datos de 3 maneras:
+
+* Utilizando los métodos get() y put()
+* Utilizando operadores de stream ( << y >> )
+* Utilizando los métodos write() y read()
 
 ---
+## Uso de archivos en C++
 
-### Diagrama de clase (UML)
+#### get() y put()
 
-Es un diagrama utilizado para mostrar rapidamente que posee una clase
-<table style="
-  border-collapse: collapse;border: solid 4px; border-radius:4px; font-size: 0.8em">
-        <thead>
-        <tr><th>Nombre de Clase</th></tr>
-        </thead>
-        <tbody>
-        <tr><td style="border:none;border-top: solid 4px">-atributo1: tipo</td></tr>
-        <tr><td style="border:none;">-atributo2: tipo</td></tr>
-        <tr><td style="border:none">-atributo3: tipo</td></tr>
-        <tr><td style="border:none;border-top: solid 4px">+metodo1(param: tipo):tipo retorno</td></tr>
-        <tr><td style="border:none">+metodo2(param: tipo):tipo retorno</td></tr>
-        <tr><td style="border:none">+metodo3(param: tipo):tipo retorno</td></tr>
-        <tr><td style="border:none">+metodo4(param: tipo):tipo retorno</td></tr>
-        </tbody>
-    </table>
+Leen y escriben un único caracter
 
+```cpp
+char letra;
+file.get(letra);
+```
+ 
+#### write() y read()
+
+Leen y escriben un bloque de datos.
+
+```cpp
+char int;
+file.read(&letra, sizeof(letra));
+```
 
 ---
-# A programar
+## Uso de archivos en C++
+
+Manejo de Errores
+
+|Método |Significado|
+|-------|---------|
+|eof()|Final del archivo|
+|fail()|Falla al escribir, leer o abrir|
+|bad()|Un error del que no se puede recuperar|
+|good()|Ningún error ocurrió|
+
+---
+## A programar

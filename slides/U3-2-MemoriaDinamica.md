@@ -5,10 +5,13 @@ slideNumber: true
 ---
 
 # Informática II
-<small>
-<i class="fab fa-telegram"></i>
-[rmarku]("https://t.me/rmarku")
-</small>
+<p>
+    <small>Created by
+        <a href="https://t.me/rmarku" target="_blank">
+            <i class="fab fa-telegram-plane"></i>rmarku
+        </a>
+    </small>
+</p>
 
 ---
 # Memoria Dinámica
@@ -44,15 +47,12 @@ Con este método, al inicio del programa le informamos cuanta memoria necesitamo
     
 * No me preocupo por el manejo de memoria
     
-
-
 ---
 ## Almacenamiento dinámico
 
 En tiempo de ejecución, le digo al Sistema Operativo que me de mas memoria
 
 Esto permite trabajar con cualquier tamaño de datos
-
 
 ---
 ## Almacenamiento dinámico
@@ -65,15 +65,18 @@ Esto permite trabajar con cualquier tamaño de datos
 #### Inconvenientes
     
 * Debo asegurarme de liberar la memoria que ya no utilizo
-    
 
 ---
 ## malloc: Memory Allocation
 Allocation = Asignación
-Allocation != Alocar 
-Alocar = Causar locura 
-Luego, la memoria no se aloca
 
+Allocation != Alocar
+ 
+Alocar = Causar locura
+ 
+Luego, la memoria no se aloca 🤪
+
+La memoria se Asigna
 ---
 ## malloc: Memory Allocation
 

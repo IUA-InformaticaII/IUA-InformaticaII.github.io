@@ -16,6 +16,6 @@
   "license": "ISC",
   "homepage": "https://IUA-InformaticaII.github.io.",
   "dependencies": {
-    "reveal-md": "^3.5.0"
+    "reveal-md": "^4.1.3"
   }
 }
