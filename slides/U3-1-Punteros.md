@@ -23,7 +23,7 @@ revealOptions:
 
 ## Memoria de Una PC
 
-![Memoria](images/punteros/memoria.svg)
+![Memoria](images/punteros/memoria.webp)
 
 ---
 
