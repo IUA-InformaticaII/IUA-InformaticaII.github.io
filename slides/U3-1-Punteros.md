@@ -22,7 +22,8 @@ revealOptions:
 ---
 
 ## Memoria de Una PC
-<img src="images/punteros/memoria.svg" style="width: 400px"/>
+
+![Memoria](images/punteros/memoria.svg)
 
 ---
 
