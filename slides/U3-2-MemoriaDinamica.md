@@ -22,8 +22,8 @@ slideNumber: true
 ## Asignación dinámica de memoria
     
 * Almacenamiento estático y dinámico
-* Funciones malloc() y free() (C)
-* Funciones new y delete (C++)
+* Funciones <span style="color: red">malloc()</span> y <span style="color: red">free()</span> (C)
+* Funciones <span style="color: lightgreen">new</span> y <span style="color: lightgreen">delete</span> (C++)
 * Ejemplos de asignación de memoria para arreglos
 * Ejemplos de asignación de memoria para matrices
     
@@ -31,19 +31,23 @@ slideNumber: true
 ---
 ## Almacenamiento estático
 
-La forma convencional de almacenar las variables en memoria se denomina estático.
+La forma convencional de almacenar las variables en memoria se denomina estática.
 
 Con este método, al inicio del programa le informamos cuanta memoria necesitamos
 
 ---
 ## Almacenamiento estático
-#### Inconvenientes
+#### <span style="color: red"> Inconvenientes </span>
     
-* No puedo utilizar mas datos de los que reserve en código
+<span style="font-size: 0.7em">
+
+* No puedo guardar mas datos de los que uso en código
 * Para hacerlo genérico reservo muchos mas datos de los que utilizo
 * Solo implementable en tiempo de compilación
-    
-#### Ventaja
+
+</span>
+
+#### <span style="color: lightgreen"> Ventajas </span>
     
 * No me preocupo por el manejo de memoria
     
@@ -67,7 +71,7 @@ Esto permite trabajar con cualquier tamaño de datos
 * Debo asegurarme de liberar la memoria que ya no utilizo
 
 ---
-## malloc: Memory Allocation
+## <span style="color: red;">malloc</span>: Memory Allocation
 Allocation = Asignación
 
 Allocation != Alocar
@@ -78,21 +82,27 @@ Luego, la memoria no se aloca 🤪
 
 La memoria se Asigna
 ---
-## malloc: Memory Allocation
+## <span style="color:red;">malloc</span>: Memory Allocation
 
 ### Sintaxis
-<pre><code class="hljs c++" data-trim>
+
+
+```cpp
     void* malloc(cantBytes);
-</code></pre>
+```
+
 Se le piden <i>cantBytes</i> al Sistema Operativo. Este devuelve un puntero
 a donde comienza dicha memoria o NULL si no hay memoria disponible
-Nota: debo castear void al tipo de datos al que va a apuntar el puntero
+Nota: debo castear <span style="color: darkgrey;">**void**</span> al tipo de datos al que va a apuntar el puntero
 
 
 ---
-## malloc: Ejemplo
+## <span style="color:red;">malloc</span>: Ejemplo
 
-<pre><code class="hljs c++" data-trim>
+Creo un arreglo de 5 enteros de manera dinámica
+
+
+```cpp
 #include &lt;iostream&gt;
 
 int main(){
@@ -105,23 +115,24 @@ int main(){
         cin >> miPuntero[i];
     }
 }
-</code></pre>
+```
 
 
 
 ---
 
-## malloc: Ejemplo
+## <span style="color:red;">malloc</span>: Ejemplo
 
 ### ¿Y eso es todo?
 
-No, debo verificar que malloc pudo reservarme esa memoria, de lo contrario me devuelve NULL
+No, debo verificar que malloc pudo reservarme esa memoria, de lo contrario me devuelve <span style="color: yellow;">NULL</span>
 
 
 ---
-## malloc: Ejemplo
+## <span style="color:red;">malloc</span>: Ejemplo
 
-<pre><code class="hljs c++" data-trim>
+
+```cpp
 #include &lt;iostream&gt;
 
 int main(){
@@ -138,22 +149,23 @@ int main(){
         cin >> miPuntero[i];
     }
 }
-</code></pre>
+```
 
 
 ---
-## malloc: Ejemplo
+## <span style="color:red;">malloc</span>: Ejemplo
 
 ### Bueno, ahora si eso es todo
 
 No!, al no utilizar mas esos recursos, debo liberar esa memoria. Devolverle al sistema operativo lo que me prestó.
 
-<img src="images/memhog.jpg" alt="" style="height: 300px">
+![MemHog](images/memhog.webp)
 
 ---
-## malloc: Ejemplo
+## <span style="color:red;">malloc</span>: Ejemplo completo
 
-<pre><code class="hljs c++" data-trim>
+
+```cpp
 #include &lt;iostream&gt;
 
 int main(){
@@ -174,7 +186,7 @@ int main(){
     }
     free(miPuntero);
 }
-</code></pre>
+```
 
 
 ---
@@ -182,35 +194,35 @@ int main(){
 ## new/delete: Asignación de memoria en C++
 
 En C++ se introducen las funciones new y delete, que vienen a remplazar a malloc() y free()
+
 New tiene como ventaja que no hay que pasarle los valores en bytes, sino el tipo de dato que quiero.
-    En realidad, new y delete hacen mas cosas que malloc y free. Esto es debido que si hago un new de una clase
+
+En realidad, new y delete hacen mas cosas que malloc y free. Esto es debido que si hago un new de una clase
         (POO) new ejecuta el constructor de la clase.
 
 
 ---
-## malloc: Ejemplo
-<pre><code class="hljs c++" data-trim>
+## new/delete: Ejemplo
+
+```cpp
 #include &lt;iostream&gt;
 
 int main(){
     int *miPuntero;
     int cant = 5;
     cin >> cant;
-    miPuntero = new int[cant];
-    if(miPuntero == NULL){
+    miPuntero = new int;
+    if(miPuntero == nullptr){
         cout << "No tengo tanta memoria!";
         exit(EXIT_FAILURE);
     }
-    int i;
-    for( i = 0 ; i < cant ; i++ ){
-        cin >> miPuntero[i];
-    }
-    for( i = 0 ; i < cant ; i++ ){
-        cout << "dato " << i << " = " <<  miPuntero[i];
-    }
+    cin >> *miPuntero;
+
+    cout << "dato " << i << " = " <<  *miPuntero;
+
     delete miPuntero;
 }
-</code></pre>
+```
 
 
 
@@ -225,7 +237,7 @@ Debo pedir memoria para el arreglo de arreglos y para cada uno de esos arreglos
 ---
 ## Matrices: Ejemplo
 
-<pre><code class="hljs c++" data-trim>
+```cpp
 #include &lt;iostream&gt;
 
 int main(){
@@ -233,21 +245,20 @@ int main(){
     int filas, columnas;
     cin >> filas;
     cin >> columnas;
-    miMatriz = (int**) malloc( filas * sizeof(int*) );
+    miMatriz = miMatriz = new int*[filas]; // o (int**) malloc( filas * sizeof(int*) );
     // Debería vefiricar que miMatriz no es NULL
     int i;
     for( i = 0 ; i < filas ; i++ ){
-        miMatriz[i] = (int*) malloc( columnas * sizeof(int) );
+        miMatriz[i] =  new int[columnas]; // o (int*) malloc( columnas * sizeof(int) );
         // Debería vefiricar que miMatriz[i] no es NULL
     }
     // Lo mismo con el Free, debo liberar cada malloc que hice.
-
     for( i = 0 ; i < filas ; i++ ){
-        free(miMatriz[i]);
+        delete[] miMatriz[i]; // o free(miMatriz[i]);
     }
-    free(miMatriz);
+    delete[] miMatriz; // o free(miMatriz);
 }
-</code></pre>
+```
 
 
 ---
@@ -261,16 +272,22 @@ Hay dos funciones mas que nos simplifican el uso de memoria con malloc
 
 Similar a Malloc, pero llena de 0 la memoria solicitada:
 
-<pre><code class="hljs c++" data-trim>
+```cpp
     void* calloc(cant_elementos, tamaño);
-</code></pre>
+```
 
 ---
 ### Realloc
 
 Aumenta el tamaño 
 de memoria asignado anteriormente y copia el contenido inicial al nuevo.
-<pre><code class="hljs c++" data-trim>
-    void* realloc(puntero_anterior, tamaño);
-</code></pre>
 
+```cpp
+    void* realloc(puntero_anterior, tamaño);
+```
+
+---
+
+# To Code
+
+![CodeMonkey](images/CodeMonkey2.webp)

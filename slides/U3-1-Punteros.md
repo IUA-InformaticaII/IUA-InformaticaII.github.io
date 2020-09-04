@@ -283,9 +283,9 @@ int main(){
 
 ## Resumen:
 
-* Un * en la declaración de una variable antes del nombre, define un puntero.
-* Un & antes de una variable indica la dirección de memoria de dicha variable.
-* Un * antes de un puntero, indica que estoy desrreferenciandolo y obteniendo el valor de donde apunta.
+* Un * en la **declaración** de una variable antes del nombre, declara un puntero.
+* Un & antes de una variable indica la **dirección** de memoria de dicha variable.
+* Un * antes de un puntero, indica que estoy **desrreferenciandolo** y obteniendo el valor de donde apunta.
 
 ---
 
@@ -336,24 +336,26 @@ int miFuncion( int a, int *b, int &c);
 ## Punteros y funciones
 
 ```cpp
-int miFuncion( int a, int *b, int &c);
+void miFuncion( int a, int *b, int &c);
 ```
 
 En este código, las 3 variables se están pasando de manera distinta.
 
-* **a** se está pasando por copia
-* **b** se esta pasando por puntero
-* **c** se esta pasando por referencia
+* **a** se está pasando por <span style="color:yellow">copia</span>
+* **b** se esta pasando por <span style="color:red">puntero</span>
+* **c** se esta pasando por <span style="color:blue">referencia</span>
 
 ---
 ### ejemplo de uso:
 
 ```cpp
-#include <iostream>
+#include &lt;iostream&gt;
 
-int miFuncion( int a, int *b, int &c){
+void miFuncion( int a, int *b, int &c){
     a++;
-    return a + *b + c;
+    (*b)++;
+    c++;
+    cout << x << " " << y << " " << z << endl;
 }
 
 int main(){
@@ -362,14 +364,7 @@ int main(){
     int z = 6;
 
     cout << miFuncion(x, &y, z) << endl;
-    cout << &num << endl;
-
-    miPuntero = &num ;
-
-    cout << miPuntero << endl;
-    cout << *miPuntero << endl;
-
-    return 0;
+    cout << x << " " << y << " " << z << endl;
 }
 ```
 
@@ -391,61 +386,110 @@ int main(){
                 <tr>
                     <td><span class="fragment fade-in" data-fragment-index="1">
                         <span class="fragment  highlight-current-green" data-fragment-index="1">
-                        *miPuntero
+                        x
                         </span></span>
                     </td>
                     <td>0x325485</td>
                     <td>
                         <div style="position:relative; margin-top:-12px" >
-                            <span class="fragment fade-out" data-fragment-index="9" style="position: absolute">0x3210</span>
-                            <span class="fragment  fade-in" data-fragment-index="9" style="position: absolute">
-                            <span class="fragment  highlight-current-green" data-fragment-index="9">
-                            <span class="fragment  highlight-current-blue" data-fragment-index="11">
-                            <span class="fragment  highlight-current-red" data-fragment-index="13">
-                            0x325486
-                            </span></span></span></span>
+                            <span class="fragment fade-out" data-fragment-index="1" style="position: absolute">0x3210</span>
+                            <span class="fragment  fade-in" data-fragment-index="1" style="position: absolute">
+                            <span class="fragment  highlight-current-green" data-fragment-index="1">
+                            2
+                            </span></span></span>
                         </div>
                     </td>
                 </tr>
                 <tr>
                     <td><span class="fragment fade-in" data-fragment-index="3">
                         <span class="fragment  highlight-current-green" data-fragment-index="3">
-                        num
+                        y
                         </span></span>
                     </td>
-                    <td>
-                        <span class="fragment  highlight-current-blue" data-fragment-index="7">
-                        <span class="fragment  highlight-current-blue" data-fragment-index="9">
-                        <span class="fragment  highlight-current-red" data-fragment-index="13">
+                    <td><span class="fragment  highlight-current-blue" data-fragment-index="9">
+                        <span class="fragment  highlight-current-blue" data-fragment-index="14">
                         0x325486
-                        </span></span></span>
+                        </span></span>
                     </td>
                     <td>
                         <div style="position:relative; margin-top:-12px" >
                             <span class="fragment fade-out" data-fragment-index="3" style="position: absolute">0x3210</span>
-                            <span class="fragment  fade-in" data-fragment-index="3" style="position: absolute">
+                            <span class="fragment  fade-out" data-fragment-index="14" style="position: absolute">
+                            <span class="fragment  fade-in" data-fragment-index="3">
                             <span class="fragment  highlight-current-green" data-fragment-index="3">
-                            <span class="fragment  highlight-current-blue" data-fragment-index="5">
-                            <span class="fragment  highlight-current-blue" data-fragment-index="13">
+                            4
+                            </span></span></span>
+                            <span class="fragment  fade-in" data-fragment-index="14" style="position: absolute">
+                            <span class="fragment  highlight-current-green" data-fragment-index="14">
                             5
-                            </span></span></span></span>
+                            </span></span></span>
                         </div>
                     </td>
                 </tr>
                 <tr>
-                    <td></td>
+                    <td>
+                        <span class="fragment fade-in" data-fragment-index="5">
+                        <span class="fragment  highlight-current-green" data-fragment-index="5">
+                        z
+                        <span class="fragment fade-out" data-fragment-index="20">
+                        <span class="fragment fade-in" data-fragment-index="10">
+                        <span class="fragment  highlight-current-green" data-fragment-index="10">
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; c</span></span></span>
+                        </span></span>
+                        </td>
                     <td>0x325487</td>
-                    <td>0x3210</td>
+                    <td>
+                        <div style="position:relative; margin-top:-12px" >
+                            <span class="fragment fade-out" data-fragment-index="5" style="position: absolute">0x3210</span>
+                            <span class="fragment  fade-out" data-fragment-index="16" style="position: absolute">
+                            <span class="fragment  fade-in" data-fragment-index="5" style="position: absolute"><span class="fragment  highlight-current-green" data-fragment-index="5">
+                            6
+                            </span></span></span>
+                            <span class="fragment  fade-in" data-fragment-index="16" style="position: absolute">
+                            <span class="fragment  highlight-current-green" data-fragment-index="16">
+                            7
+                            </span></span></span>
+                        </div>
+                    </td>
                 </tr>
                 <tr>
-                    <td></td>
+                    <td>
+                    <span class="fragment fade-out" data-fragment-index="20">
+                    <span class="fragment fade-in" data-fragment-index="8">
+                        <span class="fragment  highlight-current-green" data-fragment-index="8">
+                        a
+                        </span></span></span></td>
                     <td>0x325488</td>
-                    <td>0x3210</td>
+                    <td><div style="position:relative; margin-top:-12px" >
+                            <span class="fragment fade-out" data-fragment-index="8" style="position: absolute">0x3210</span>
+                            <span class="fragment  fade-out" data-fragment-index="12" style="position: absolute">
+                            <span class="fragment  fade-in" data-fragment-index="8">
+                            <span class="fragment  highlight-current-green" data-fragment-index="8">
+                            2
+                            </span></span></span>
+                            <span class="fragment  fade-in" data-fragment-index="12" style="position: absolute">
+                            <span class="fragment  highlight-current-green" data-fragment-index="12">
+                            3
+                            </span></span></span>
+                        </div>
+                    </td>
                 </tr>
                 <tr>
-                    <td></td>
+                    <td>
+                    <span class="fragment fade-out" data-fragment-index="20">
+                    <span class="fragment fade-in" data-fragment-index="9">
+                        <span class="fragment  highlight-current-green" data-fragment-index="9">
+                        *b
+                        </span></span></span>
+                    </td>
                     <td>0x325489</td>
-                    <td>0x3210</td>
+                    <td><div style="position:relative; margin-top:-12px" >
+                            <span class="fragment fade-out" data-fragment-index="9" style="position: absolute">0x3210</span>
+                            <span class="fragment  fade-in" data-fragment-index="9" style="position: absolute"><span class="fragment  highlight-current-green" data-fragment-index="9">
+                            <span class="fragment  highlight-current-blue" data-fragment-index="14">
+                            0x325486
+                            </span></span></span>
+                        </div></td>
                 </tr>
                 <tr>
                     <td></td>
@@ -477,30 +521,50 @@ int main(){
         </td>
         <td width="65%">
 <div><pre style="background: #262626">
-<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;iostream&gt;</span></span>
+  <span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;iostream&gt;</span></span>
+<span class="fragment  fade-in" data-fragment-index="7"><span class="fragment  fade-out" data-fragment-index="11">🟥</span></span><span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">miFuncion</span><span class="hljs-params">( <span class="hljs-keyword">int</span> a, <span class="hljs-keyword">int</span> &#42;b, <span class="hljs-keyword">int</span> &amp;c)</span></span>{
+<span class="fragment  fade-in" data-fragment-index="11"><span class="fragment  fade-out" data-fragment-index="13">🟥</span></span>    a++;
+<span class="fragment  fade-in" data-fragment-index="13"><span class="fragment  fade-out" data-fragment-index="15">🟥</span></span>    (*b)++;
+<span class="fragment  fade-in" data-fragment-index="15"><span class="fragment  fade-out" data-fragment-index="17">🟥</span></span>    c++;
+<span class="fragment  fade-in" data-fragment-index="17"><span class="fragment  fade-out" data-fragment-index="19">🟥</span></span>    <span class="hljs-built_in">cout</span> &lt;&lt; a &lt;&lt; <span class="hljs-string">" "</span> &lt;&lt; *b &lt;&lt; <span class="hljs-string">" "</span> &lt;&lt; c &lt;&lt; <span class="hljs-built_in">endl</span>;
+<span class="fragment  fade-in" data-fragment-index="19"><span class="fragment  fade-out" data-fragment-index="21">🟥</span></span>  }<br>
 <span class="fragment  fade-out" data-fragment-index="0">🟥</span><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">main</span><span class="hljs-params">()</span></span>{
-<span class="fragment  fade-in" data-fragment-index="0"><span class="fragment  fade-out" data-fragment-index="2">🟥</span></span>        <span class="hljs-keyword">int</span> *miPuntero;
-<span class="fragment  fade-in" data-fragment-index="2"><span class="fragment  fade-out" data-fragment-index="4">🟥</span></span>        <span class="hljs-keyword">int</span> num = <span class="hljs-number">5</span>;<br>
-<span class="fragment  fade-in" data-fragment-index="4"><span class="fragment  fade-out" data-fragment-index="6">🟥</span></span>        <span class="hljs-built_in">cout</span> &lt;&lt; num &lt;&lt; <span class="hljs-built_in">endl</span>;
-<span class="fragment  fade-in" data-fragment-index="6"><span class="fragment  fade-out" data-fragment-index="8">🟥</span></span>        <span class="hljs-built_in">cout</span> &lt;&lt; &amp;num &lt;&lt; <span class="hljs-built_in">endl</span>;<br>
-<span class="fragment  fade-in" data-fragment-index="8"><span class="fragment  fade-out" data-fragment-index="10">🟥</span></span>        miPuntero = &amp;num ;<br>
-<span class="fragment  fade-in" data-fragment-index="10"><span class="fragment  fade-out" data-fragment-index="12">🟥</span></span>        <span class="hljs-built_in">cout</span> &lt;&lt; miPuntero &lt;&lt; <span class="hljs-built_in">endl</span>;
-<span class="fragment  fade-in" data-fragment-index="12"><span class="fragment  fade-out" data-fragment-index="14">🟥</span></span>        <span class="hljs-built_in">cout</span> &lt;&lt; *miPuntero &lt;&lt; <span class="hljs-built_in">endl</span>;
-<span class="fragment  fade-in" data-fragment-index="14"><span class="fragment  fade-out" data-fragment-index="15">🟥</span></span>        <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
-    }</pre></div>
+<span class="fragment  fade-in" data-fragment-index="0"><span class="fragment  fade-out" data-fragment-index="2">🟥</span></span>    <span class="hljs-keyword">int</span> x = <span class="hljs-number">2</span>;
+<span class="fragment  fade-in" data-fragment-index="2"><span class="fragment  fade-out" data-fragment-index="4">🟥</span></span>    <span class="hljs-keyword">int</span> y = <span class="hljs-number">4</span>;
+<span class="fragment  fade-in" data-fragment-index="4"><span class="fragment  fade-out" data-fragment-index="6">🟥</span></span>    <span class="hljs-keyword">int</span> z = <span class="hljs-number">6</span>;<br>
+<span class="fragment  fade-in" data-fragment-index="6"><span class="fragment  fade-out" data-fragment-index="7">🟥</span></span>    miFuncion(x, &amp;y, z);
+<span class="fragment  fade-in" data-fragment-index="21"><span class="fragment  fade-out" data-fragment-index="23">🟥</span></span>    <span class="hljs-built_in">cout</span> &lt;&lt; x &lt;&lt; <span class="hljs-string">" "</span> &lt;&lt; y &lt;&lt; <span class="hljs-string">" "</span> &lt;&lt; z &lt;&lt; <span class="hljs-built_in">endl</span>;
+  }</pre></div>
         </td>
     </tr>
 </table>
 
 <div style="font-size: 0.6em; background: #1c1e20; text-align: left">
-    <span class="fragment  fade-in" data-fragment-index="5">
-    <span class="fragment  highlight-current-green" data-fragment-index="5">5</span></span><br>
-    <span class="fragment  fade-in" data-fragment-index="7">
-    <span class="fragment  highlight-current-green" data-fragment-index="7">0x325486</span></span><br>
-    <span class="fragment  fade-in" data-fragment-index="11">
-    <span class="fragment  highlight-current-green" data-fragment-index="11">0x325486</span></span><br>
-    <span class="fragment  fade-in" data-fragment-index="13">
-    <span class="fragment  highlight-current-green" data-fragment-index="13">5</span></span><br>
+    <span class="fragment  fade-in" data-fragment-index="18">
+    <span class="fragment  highlight-current-green" data-fragment-index="18">3 5 7</span></span><br>
+    <span class="fragment  fade-in" data-fragment-index="22">
+    <span class="fragment  highlight-current-green" data-fragment-index="22">2 5 7</span></span><br>
 </div>
 
 ---
+
+## Punteros y estructuras/clases
+
+Cuando usamos punteros con clases o estructuras, se cambia el modo de acceder a miembros.
+
+```cpp
+
+Persona pp;
+Persona *aa = &pp;
+
+cout << pp.edad() << endl;
+cout << aa->edad() << endl;
+
+
+```
+
+---
+
+# To Code
+
+![CodeMonkey](images/CodeMonkey1.webp)
