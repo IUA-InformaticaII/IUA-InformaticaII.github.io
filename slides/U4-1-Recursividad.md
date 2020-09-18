@@ -26,45 +26,56 @@ slideNumber: true
 <img src="images/recursion_comic.jpeg" alt="" style="height: 500px">
 
 ---
+## Recursividad
+
+Es la forma de especificar un proceso basado en su propia definición.
+
+Un algoritmo recursivo es un algoritmo que expresa la solución de un 
+problema en terminos de una llamada a si mismo. La llamada a si mismo 
+se conoce como llamada recursiva
+
+
+---
 ## La recursividad es esto:
-<pre><code class="hljs c++" data-trim>
+```cpp
     int funcion(){
         funcion();
     }
-</code></pre>
+```
 Una función que se llama a si misma.
 
 ---
 ## ¿Por que una función se llamaría a si misma?
-<p>Porque es recursiva, XD</p>
 
-* <b>Recursividad</b>:<br>
-        Cualidad de recursivo.
+Porque es recursiva, 🤣
+
+* **Recursividad**:
+
+  Cualidad de recursivo.
     
-* <b>Recursivo</b>:<br>
-        Que puede repetirse o aplicarse indefinidamente.
+* **Recursivo**:
+
+  Que puede repetirse o aplicarse indefinidamente.
     
-
-
-
 ---
 ### Ejemplo
 ## Factorial
-<h1 style="font-size: 5em">n!
-<p>Plantiemos una solución.</p>
+
+# n!
+
+Plantiemos una solución.
 
 ---
-## Ejemplo: Factorial
-<h1 style="font-size: 2.5em">5! = 5 * 4 * 3 * 2 * 1 
-<h1 style="font-size: 2.5em">5! = 5 *(4 * 3 * 2 * 1)
-<h1 style="font-size: 2.5em">4! = 4 * 3 * 2 * 1
-<h1 style="font-size: 2.5em">5! = 5 * 4!
+### Ejemplo: Factorial
+
+## 5! = 5 * 4 * 3 * 2 * 1 
+## 5! = 5 *(4 * 3 * 2 * 1)
+## 4! = 4 * 3 * 2 * 1
+## 5! = 5 * 4!
 
 ---
 ## Ejemplo: Factorial
 # N! = N * (N-1)!
-
-
 
 ---
 ## Ejemplo: Factorial
@@ -83,13 +94,12 @@ Hay solo un problema
 
 ---
 ## Ejemplo: Factorial
-<h1 style="font-size: 2em">1! = 1 
-<h1 style="font-size: 2em">2! = 2 * 1! = 2
-<h1 style="font-size: 2em">3! = 3 * 2! = 6
-<h1 style="font-size: 2em">4! = 4 * 3! = 24
-<h1 style="font-size: 2em">5! = 5 * 3! = 120
 
-
+## 5! = 5 * 3! = 120
+## 4! = 4 * 3! = 24
+## 3! = 3 * 2! = 6
+## 2! = 2 * 1! = 2
+## 1! = 1 
 
 ---
 ## Recursividad
@@ -98,12 +108,10 @@ Hay solo un problema
 * Se utiliza para dar soluciones elegantes a problemas complejos
 * Es una alternativa a los bucles de repetición
 
-
-
 ---
 ## Función recursiva
 
-* La función recursiva sabe como resolver el o los casos mas simples y un caso base.
+* La función recursiva sabe como resolver el o los casos más simples y un caso base.
 * Si se llama a la función con el caso base, esta simplemente devuelve un resultado
 * Si se llama sin el caso base, la función divide el problema en:
     * Una parte que sabe resolver
@@ -114,17 +122,15 @@ Hay solo un problema
 * Como este problema se parece al problema original, la función llama a una copia de si misma
 para que resuelva el problema. (llamada recursiva)
 
-    
-
-
 ---
 ## Funciones recursivas
-<p>Las funciones recursivas tienen dos partes:</p>
+
+Las funciones recursivas tienen dos partes:
 
 * El caso **Recursivo**, que soluciona parte del problema y hace la llamada recursiva.
 * El caso **Base**, el que no hace llamada recursiva.
 
-<p>Una función recursiva puede tener uno o mas casos bases y una o mas llamadas recursivas.</p>
+Una función recursiva puede tener uno o más casos bases y una o más llamadas recursivas.
 
 ---
 ## Funciones recursivas
@@ -132,8 +138,7 @@ para que resuelva el problema. (llamada recursiva)
 
 * La recursión es poco intuitiva
 * No hacer cosas recursivas si se puede hacer iterativa
-* Algunas veces, la solución recursiva es la solución mas elegante y entendible.
-
+* Algunas veces, la solución recursiva es la solución más elegante y entendible.
 
 ---
 ## Funciones recursivas
@@ -142,8 +147,6 @@ para que resuelva el problema. (llamada recursiva)
 * La recursion es difícil de depurar
 * Si el caso base esta mal definido, probablemente produzca un Stack Overflow
 * Comúnmente, la función recursiva no funciona o funciona completamente.
-
-
 
 ---
 ## Funciones recursivas
@@ -154,41 +157,36 @@ para que resuelva el problema. (llamada recursiva)
 * Agregar el caso Base.
 * Comúnmente, si estas "Hardcodeando" muchos casos bases, la estás complicando
 
-
 ---
 ## Funciones recursivas
 ### Como pensar el caso Recursivo
 
-* Piensa en como dividirlo en un subproblema y hacerlo mas pequeño
-* Piensa como achicar el problema y hacerlo mas simple (N-1?, N/2?, ...)
+* Piensa en como dividirlo en un subproblema y hacerlo más pequeño
+* Piensa como achicar el problema y hacerlo más simple (N-1?, N/2?, ...)
 * Piensa en la recursividad como hacer trampa
-
 
 ---
 ## Funciones recursivas
 ### Como pensar el caso Base
 
-* Piensa en cual sería el problema mas simple
+* Piensa en cual sería el problema más simple
 * Piensa cual sería la solución directa de este subproblema
 * Asegurate que la recursion converge al caso base
 
+---
+### Ejemplo Potencia
 
+## 2<sup>4</sup> =2 * 2 * 2 * 2 
+## 2<sup>4</sup> = 2 * ( 2 * 2 * 2 ) 
+## 2<sup>4</sup> = 2 x 2<sup>3</sup>
 
 ---
 ### Ejemplo Potencia
 
-<h1 style="font-size: 2.5em">2<sup>4</sup> =2 * 2 * 2 * 2 
-<h1 style="font-size: 2.5em">2<sup>4</sup> = 2 * ( 2 * 2 * 2 ) 
-<h1 style="font-size: 2.5em">2<sup>4</sup> = 2 x 2<sup>3</sup>
-
-
-
----
-### Ejemplo Potencia
-<pre><code id="code2" class="hljs c++" data-trim contenteditable spellcheck="false">
+```cpp
 #include &lt;iostream&gt;
 
-unsigned long long potencia(unsigned base, unsigned exp){
+unsigned long long potencia(unsigned int base, unsigned int exp){
     if(exp == 0){
         return 1;
     }
@@ -203,7 +201,7 @@ int main(){
     cout << "2 a la 32: " << potencia(2,32) << endl;
     return 0;
 }
-</code></pre>
+```
 
 ---
 ### Ejemplo Fibonacci
@@ -221,7 +219,7 @@ f(n-1)+f(n-2) & n > 0 \\
 ---
 ### Ejemplo Fibonacci
 
-<pre><code id="code3" class="hljs c++" data-trim contenteditable spellcheck="false">
+```cpp
 #include &lt;iostream&gt;
 
 unsigned long fibonacci(unsigned n){
@@ -238,9 +236,19 @@ int main(){
     cout << "fib: 15  " << fibonacci(15) << endl;
     return 0;
 }
-</code></pre>
+```
     
-
-
 ---
+
+## Backtracking o Vuelta atrás
+
+Es una metodología para encontrar soluciones que nos permite
+probar diferentes caminos y volver si no es el correcto.
+ 
+---
+
+## Backtracking o Vuelta atrás
+![Laberinto](images/laberinto.png)
+---
+
 # Ejemplo Laberinto ...

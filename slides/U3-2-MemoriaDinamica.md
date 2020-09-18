@@ -19,16 +19,6 @@ slideNumber: true
 
 
 ---
-## Asignación dinámica de memoria
-    
-* Almacenamiento estático y dinámico
-* Funciones <span style="color: red">malloc()</span> y <span style="color: red">free()</span> (C)
-* Funciones <span style="color: lightgreen">new</span> y <span style="color: lightgreen">delete</span> (C++)
-* Ejemplos de asignación de memoria para arreglos
-* Ejemplos de asignación de memoria para matrices
-    
-
----
 ## Almacenamiento estático
 
 La forma convencional de almacenar las variables en memoria se denomina estática.
@@ -69,6 +59,16 @@ Esto permite trabajar con cualquier tamaño de datos
 #### Inconvenientes
     
 * Debo asegurarme de liberar la memoria que ya no utilizo
+
+---
+## Asignación dinámica de memoria
+    
+* Almacenamiento estático y dinámico
+* Funciones <span style="color: red">malloc()</span> y <span style="color: red">free()</span> (C)
+* Funciones <span style="color: lightgreen">new</span> y <span style="color: lightgreen">delete</span> (C++)
+* Ejemplos de asignación de memoria para arreglos
+* Ejemplos de asignación de memoria para matrices
+    
 
 ---
 ## <span style="color: red;">malloc</span>: Memory Allocation

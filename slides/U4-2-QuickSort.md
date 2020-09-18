@@ -24,16 +24,14 @@ slideNumber: true
 ---
 ## Metodo Quicksort
 
-<p>Sea un Arreglo y Largo el número de elementos del arreglo
-    que debe ser ordenado. Elegir un elemento A de una
-    posición específica en el arreglo (ej. A = Arreglo[0]).
-    Suponiendo que A está en la posición j entonces:</p>
+Sea un Arreglo y Largo el número de elementos del arreglo
+que debe ser ordenado. Elegir un elemento A de una
+posición específica en el arreglo (ej. A = Arreglo[0]).
+Suponiendo que A está en la posición j entonces:
 
 * Cada uno de los elementos en las posiciones de 0 a j-1 es 1 es menor o igual que A
         
 * Cada uno de los elementos en las posiciones j+1 a n-1 es 1 es mayor o igual que A
-        
-
 
 ---
 ## Ejemplo
@@ -311,31 +309,6 @@ pivote = 4
 </table>
 pivote = 4
 
----
-## Ejemplo
-
-<p>Incremento el Izq y veo si corresponde<br>
-    D == I, Encontré el lugar del 4
-</p>
-<table>
-    <tr class="desc-qs">
-        <td></td>
-        <td></td>
-        <td></td>
-        <td>I<br>D</td>
-        <td></td>
-        <td></td>
-    </tr>
-    <tr class="dato-qs">
-        <td>1</td>
-        <td>3</td>
-        <td>2</td>
-        <td>&#9634;</td>
-        <td>6</td>
-        <td>5</td>
-    </tr>
-</table>
-pivote = 4
 
 ---
 ## Ejemplo
@@ -753,7 +726,7 @@ pivote =
 ### Ejemplo Código
 
 ```cpp
-#include <iostream>
+#include  iostream>
 
 using namespace std;
 #define TAM 11

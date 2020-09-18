@@ -1,9 +1,7 @@
-[![Build Status](https://travis-ci.org/UCC-LabCompu2/filminas.svg?branch=master)](https://travis-ci.org/UCC-LabCompu2/filminas)
-
-Filminas de la materia Laboratorio de Computación II
+Filminas de la materia Informatica II
 ====================================================
 
-Se pueden ver online en https://ucc-labcompu2.github.io/filminas/
+Se pueden ver online en https://iua-informaticaii.github.io/
 
 
 Steps:
