@@ -5,16 +5,11 @@ slideNumber: true
 ---
 # Recursividad
     
-
-<p>
-    <small>Created by
-        <a href="https://t.me/rmarku" target="_blank">
-            <i class="fab fa-telegram-plane"></i>rmarku
-        </a>
-    </small>
-</p>
-
-
+<small>Created by
+    <a href="https://t.me/rmarku" target="_blank">
+        <i class="fab fa-telegram-plane"></i>rmarku
+    </a>
+</small>
 
 ---
 ## ¿Qué es la recursividad?

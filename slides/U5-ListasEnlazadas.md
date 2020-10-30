@@ -3,77 +3,106 @@ title: Listas Enlazadas
 theme: league
 slideNumber: true
 ---
-# Colas
+# Listas Enlazadas
 
-<p>
-    <small>Created by
-        <a href="https://t.me/rmarku" target="_blank">
-            <i class="fab fa-telegram-plane"></i>rmarku
-        </a>
-    </small>
-</p>
+<small>Created by
+    <a href="https://t.me/rmarku" target="_blank">
+        <i class="fab fa-telegram-plane"></i>rmarku
+    </a>
+</small>
+
+---
+# Listas Enlazadas
+
+Las listas enlazadas son una Estructura de datos del grupo de los Contenedores. Permite
+guardar datos y poder recuperarlos  más adelante.
+
+<img src="images/listas/bag.svg" alt="" class="noBorder" style="height: 300px;">
 
 ---
 
-## Colas
-<p>Una cola es una colección ordenada de elementos en la que pueden insertarse elementos en un extremo (FONDO)
-    y suprimirse elementos por el otro extremo (FRENTE)
-</p>
-<img src="images/colas/cola.png" alt="" class="noBorder" style="height: 300px;">
+## Nodo
+
+El nodo es la estructura fundamental de la lista. Este esta formado por dos partes. El dato que se desea guardar y un
+puntero al siguiente nodo.
+
+<img src="images/listas/Nodo.svg" alt="" class="noBorder" style="height: 300px;">
+---
+
+## TDA Nodo
+
+Como toda estructura de datos, el nodo consta de datos o atributos y acciones o métodos.
+
+#### Atributos
+
+* `int data;`
+  * Puntero al siguiente nodo
+* `Node *next;`
+  * Puntero al siguiente nodo
+
 
 ---
 
-## Colas
+## TDA Nodo
 
-Las colas son estructuras que se encuentran frecuentemente en la vida diaria. Algunos ejemplos se encuentran en la
-fila de un banco, un grupo de automóviles esperando en una cab ina de peaje, personas esperando para comprar un
-boleto pa ra el cine, etc.
-<img src="images/colas/colapersonas.jpg" alt="">
+#### Métodos
 
----
+<small>
 
-## Colas
+* `int getData()`
+  * Devuelve el dato interno al nodo
+* `void setData(int d)`            	
+  * Cambia el dato interno del nodo          	
+* `Node* getNext()`                	
+  * Devuelve el puntero al nodo siguiente             	
+* `void setNext(Node *n)` 	
+  * Remplazar puntero al siguiente nodo      	
 
-Por ejemplo, la forma en que se acomodan los coches que llegan a una cabina de peaje es la siguiente:
-se puede añadir un coche al final de la cola, y el primero que se va es el que está al principio de la cola . O sea
-que el primero que llego es el primero que se va.
-
----
-
-## Colas
-<br>
-La propiedad anterior se conoce como <b>FIFO</b> ( First In First Out ), es decir, el primero en entrar será el
-primero en salir.
-<img src="images/colas/fifo.png" alt="">
+</small>
 
 ---
 
-## Colas
-<table>
-    <tr>
-        <td><b>encolar(x)</b></td>
-        <td>Inserta el elemento por el Fondo de la cola.</td>
-    </tr>
-    <tr>
-        <td><b>x=desencolar()</b></td>
-        <td>Saca un elemento por el frente de la cola y lo almacena en x</td>
-    </tr>
-    <tr>
-        <td><b>estaVacia()</b></td>
-        <td>Devuelve V/F según si está vacía la cola.</td>
-    </tr>
-</table>
+## Listas Enlazadas
+
+Una lista enlazada es una estructura de datos en la que cada elemento (**nodo**) tiene dos partes, uno con información
+ (un valor de tipo genérico, dato, info,etc.) y el otro con la **dirección** del nodo siguiente.
+<img src="images/listas/ListaEnlazada.svg" alt="" class="noBorder" style="height: 300px;">
 
 ---
 
-## Colas
-#### Formas de implementar
+## TDA Lista Enlazada
 
-<ul>
-    <li>Mediante arreglos: <br> Se mantiene un indice de entrada y uno de la salida.</li>
-    <li>Mediante Nodos enlazados:<br>Se mantiene un puntero al primer nodo y uno al ultimo nodo.</li>
-</ul>
+Como toda estructura de datos, la lista enlazada consta de datos o atributos y acciones o métodos.
+
+#### Atributos
+
+* `Node *inicio;`
+  * Puntero al primer nodo de la lista               	
+
 
 ---
-## Colas
+
+## TDA Lista Enlazada
+
+#### Métodos
+
+<small>
+
+* `void insert(int pos, int dato)`
+  * Insertar dato a la lista en el lugar pos
+* `void remove(int pos)`            	
+  * Remover dato a la lista                  	
+* `int get(int pos)`                	
+  * Obtener dato en la lista                 	
+* `void replace(int pos, int dato)` 	
+  * Remplazar dato en la lista               	
+* `int find(int dato)`              	
+  * Buscar un dato en la lista               	
+* `bool isEmpty()`                  	
+  * Ver si está vacía la lista               	
+
+</small>
+
+---
+## Lista Enlazada
 ## A implementar.

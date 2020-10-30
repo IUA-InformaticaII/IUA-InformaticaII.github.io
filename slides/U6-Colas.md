@@ -5,24 +5,21 @@ slideNumber: true
 ---
 # Colas
 
-<p>
-    <small>Created by
-        <a href="https://t.me/rmarku" target="_blank">
-            <i class="fab fa-telegram-plane"></i>rmarku
-        </a>
-    </small>
-</p>
+<small>Created by
+    <a href="https://t.me/rmarku" target="_blank">
+        <i class="fab fa-telegram-plane"></i>rmarku
+    </a>
+</small>
 
 ---
-
 ## Colas
-<p>Una cola es una colección ordenada de elementos en la que pueden insertarse elementos en un extremo (FONDO)
-    y suprimirse elementos por el otro extremo (FRENTE)
-</p>
+
+Una cola es una colección ordenada de elementos en la que pueden insertarse elementos en un extremo (FONDO)
+y suprimirse elementos por el otro extremo (FRENTE)
+
 <img src="images/colas/cola.png" alt="" class="noBorder" style="height: 300px;">
 
 ---
-
 ## Colas
 
 Las colas son estructuras que se encuentran frecuentemente en la vida diaria. Algunos ejemplos se encuentran en la
@@ -31,7 +28,6 @@ boleto pa ra el cine, etc.
 <img src="images/colas/colapersonas.jpg" alt="">
 
 ---
-
 ## Colas
 
 Por ejemplo, la forma en que se acomodan los coches que llegan a una cabina de peaje es la siguiente:
@@ -39,15 +35,14 @@ se puede añadir un coche al final de la cola, y el primero que se va es el que 
 que el primero que llego es el primero que se va.
 
 ---
-
 ## Colas
-<br>
-La propiedad anterior se conoce como <b>FIFO</b> ( First In First Out ), es decir, el primero en entrar será el
+
+La propiedad anterior se conoce como **FIFO** ( First In First Out ), es decir, el primero en entrar será el
 primero en salir.
+
 <img src="images/colas/fifo.png" alt="">
 
 ---
-
 ## Colas
 <table>
     <tr>
@@ -65,14 +60,13 @@ primero en salir.
 </table>
 
 ---
-
 ## Colas
 #### Formas de implementar
 
-<ul>
-    <li>Mediante arreglos: <br> Se mantiene un indice de entrada y uno de la salida.</li>
-    <li>Mediante Nodos enlazados:<br>Se mantiene un puntero al primer nodo y uno al ultimo nodo.</li>
-</ul>
+* Mediante arreglos: 
+  Se mantiene un índice de entrada y uno de la salida.
+* Mediante Nodos enlazados:
+  Se mantiene un puntero al primer nodo y uno al ultimo nodo.
 
 ---
 ## Colas
