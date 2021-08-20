@@ -39,7 +39,7 @@ Podemos representar desde -2<sup>(n-1)</sup>-1 hasta 2<sup>(n-1)</sup>-1
 
 <aside class="notes">
     El primer dígito representa positivo o negativo, en caso de ser negativo se invierten todos los otros bits<br>
-    En este caso se suma un 1 a la representación del comp lemento a 1 del número negativo.
+    En este caso se suma un 1 a la representación del complemento a 1 del número negativo.
 </aside>
 
 
@@ -52,7 +52,7 @@ Podemos representar desde -2<sup>(n-1)</sup>-1 hasta 2<sup>(n-1)</sup>-1
 El número 387,53 se representa como 38753x10<sup>-2</sup>
 
 El numero consta de una MANTISA(24bits) y un EXPONENTE(8bits).
-    Comunmente se utilizan 32 bits
+Comúnmente se utilizan 32 bits
 
 Esto nos permite representar números desde<br> 2<sup>23-1</sup> x 10<sup>127</sup> ➡️ 10<sup>-128</sup>
 
@@ -77,9 +77,9 @@ Interpretación de binarios en símbolos gráficos
 
 Hay distintos encoding, ASCII, UTF8, UTF16, ISO, etc...
 
-Lo mas común es utilizar 8bits, pero hay encodings de 7, 10, 16, 32 bits...
+Lo más común es utilizar 8bits, pero hay encodings de 7, 10, 16, 32 bits...
 
-El número binario **00100110**, puede ser el número **38**, el **0x26** o el simboló **'&'**
+El número binario **00100110**, puede ser el número **38**, el **0x26** o el símbolo **'&'**
 
 
 <aside class="notes">
