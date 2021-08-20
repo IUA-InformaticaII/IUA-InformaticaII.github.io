@@ -51,8 +51,9 @@ Podemos representar desde -2<sup>(n-1)</sup>-1 hasta 2<sup>(n-1)</sup>-1
 
 El número 387,53 se representa como 38753x10<sup>-2</sup>
 
-El numero consta de una MANTISA(24bits) y un EXPONENTE(8bits).
-Comúnmente se utilizan 32 bits
+En binario:
+
+<img src="images/tda/float.png" alt="" class="noBorder">
 
 Esto nos permite representar números desde<br> 2<sup>23-1</sup> x 10<sup>127</sup> ➡️ 10<sup>-128</sup>
 
@@ -64,7 +65,7 @@ Esto nos permite representar números desde<br> 2<sup>23-1</sup> x 10<sup>127</s
 
 <script>
     function ascii(txt) {
-        document.getElementById('asciiOut').innerHTML = txt.value.charCodeAt(0)
+        document.getElementById('asciiOut').innerHTML = txt.value.charCodeAt(0);
         txt.select()
     }
 </script>
@@ -103,35 +104,42 @@ El número binario **00100110**, puede ser el número **38**, el **0x26** o el s
 ## Tipo de Dato
     
 * No es el dato, es lo que puede contener
-* Un tipo de dato es, en esencia, un espacio en memoria con restricciones.
-* Por ejemplo, el tipo "int" representa, generalmente, un conjunto de enteros de 32 bits cuyo rango va desde 
-el -2.147.483.648 al 2.147.483.647
+* Un tipo de dato es, en esencia, un espacio en memoria que se interpretan de cierta forma.
+* Al tipo de dato se le imponen restricciones, como los valores que puede tomar y 
+  que operaciones se pueden realizar
+
+Por ej: el tipo "int" es generalmente un conjunto de 32 bits que representan un valor entero cuyo rango es
+
+-2.147.483.648 ➡️ 2.147.483.647
+
+-2^31 ➡️ 2^31
    
 ---
+## Tipo de Dato primitivo
 
-## Tipo de Dato
+Son los tipos de datos que vienen en el lenguaje de programación. Algunos de C++ son:
+ * char
+ * float
+ * int
+ * unsigned int
+ * long
 
-* También se restringen las operaciones que se pueden realizar en ellos.
-* No confundirlos con Tipos de Datos Abstractos
-
-<aside class="notes">
-</aside>
 ---
+## Tipo de Dato de usuario
 
-## Estructuras de datos
-
-Las estructuras de datos son un conjunto de datos.
-
-<img style="background: white; border-radius: 10px;" src="images/tda/dataStructure.png" alt="">
+Algunos lenguajes permiten al usuario definir sus propios tipos de datos.
 
 
-<aside class="notes">
-</aside>
+```cpp
+typedef unsigned char miByte;
+
+miByte contador = 5;
+```
 
 ---
 ## Tipos de Datos Abstractos
 
-**Abstracción:** consiste en tomar las cualidades o características que nos resulten mas relevantes de un
+**Abstracción:** consiste en tomar las cualidades o características que nos resulten más relevantes de un
     objeto, con el fin de delimitar el análisis de este
 
 
@@ -148,11 +156,36 @@ Las estructuras de datos son un conjunto de datos.
 ---
 ## Tipos de Datos Abstractos
     
-* Los TDA son una abstracción de algún tipo de dato
-* Un Tipo de dato abstracto es un conjunto de datos u objetos al cual se le asocian operaciones
-* A nivel usuario, se pueden ver el esquema de los datos y las operaciones para manipular los elementos que lo componen.
+* Un TDA es un modelo matemático de una abstracción.
+* Este modelo está compuesto por operaciones definidas sobre un conjunto de datos
+* Un TDA se implementa con un conjunto de datos a los cuales se le asocian operaciones (funciones)
+
+<img style="background: white; border-radius: 10px;" src="images/tda/abstractDT.png" alt="">
+
+---
+## Tipos de Datos Abstractos
+
+* Los TDA definen la **interfaz** de la abstracción
+* Los TDA no fijan como realizar la **implementación**
+
+Generalmente, en un TDA
+
+* Se destacan los detalles (normalmente pocos) de la especificación (el qué).
+* Se ocultan los detalles (casi siempre numerosos) de la implementación (el cómo).
+
+---
+
+## Estructuras de datos
+
+Una estructura de datos es un TDA implementado
 
 <img style="background: white; border-radius: 10px;" src="images/tda/data.png" alt="">
 
-<aside class="notes">
-</aside>
+---
+
+### Resumiendo
+
+* Un tipo de dato es espacio en memoria interpretado de cierta forma.
+* Un tipo de dato primitivo es un tipo de dato implementado en el lenguaje de programación.
+* Un TDA es un modelo matemático de una abstracción.
+* Una estructura de dato es una implementación de un TDA
