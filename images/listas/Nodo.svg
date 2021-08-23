@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:xhtml="http://www.w3.org/1999/xhtml"
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:xlink="http://www.w3.org/1999/xlink"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="67.841049mm"
+   height="16.139584mm"
+   viewBox="-0.5 -0.5 256.40712 60.999998"
+   version="1.1"
+   id="svg83"
+   sodipodi:docname="Nodo.svg"
+   inkscape:version="1.0.1 (3bc2e813f5, 2020-09-07)">
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1920"
+     inkscape:window-height="1051"
+     id="namedview23"
+     showgrid="false"
+     inkscape:zoom="4.3407532"
+     inkscape:cx="136.60206"
+     inkscape:cy="30.5"
+     inkscape:window-x="1920"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="switch59-3" />
+  <metadata
+     id="metadata87">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <defs
+     id="defs2" />
+  <defs
+     id="defs9">
+    <linearGradient
+       id="a"
+       x1="-0.46345305"
+       x2="-0.46345305"
+       y1="-0.53942895"
+       y2="65.270905"
+       gradientTransform="scale(1.0788579,0.92690611)"
+       gradientUnits="userSpaceOnUse">
+      <stop
+         offset="0%"
+         style="stop-color:#fff2cc"
+         id="stop4" />
+      <stop
+         offset="100%"
+         style="stop-color:#ffd966"
+         id="stop6" />
+    </linearGradient>
+  </defs>
+  <path
+     fill="url(#a)"
+     stroke="#000000"
+     d="M 0,0 H 69.999996 V 60 H 0 Z"
+     pointer-events="all"
+     id="path11"
+     style="fill:url(#a)" />
+  <path
+     fill="#ffffff"
+     stroke="#000000"
+     d="M 69.999996,0 H 140 V 60 H 69.999996 Z"
+     pointer-events="all"
+     id="path17" />
+  <path
+     fill="none"
+     stroke="#000000"
+     stroke-miterlimit="10"
+     d="m 113,30 h 88.88"
+     pointer-events="stroke"
+     id="path33" />
+  <circle
+     cx="110"
+     cy="30"
+     r="3"
+     stroke="#000000"
+     pointer-events="all"
+     id="circle35" />
+  <path
+     fill="none"
+     d="m 5,100 h 59.999996 v 30 H 5 Z"
+     pointer-events="all"
+     id="path55" />
+  <switch
+     transform="translate(-0.5,-0.5)"
+     id="switch59">
+    <text
+       x="35.570026"
+       y="37.936535"
+       font-family="'Courier New'"
+       font-size="24.7686px"
+       font-weight="bold"
+       text-anchor="middle"
+       id="text57"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:24.7686px;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-anchor:middle;stroke-width:1.37603">Dato</text>
+  </switch>
+  <path
+     stroke="#000000"
+     stroke-miterlimit="10"
+     d="m 207.13,30 -7,3.5 1.75,-3.5 -1.75,-3.5 z"
+     pointer-events="all"
+     id="path69" />
+  <switch
+     id="switch81">
+    <g
+       requiredFeatures="http://www.w3.org/TR/SVG11/feature#Extensibility"
+       id="g75" />
+    <a
+       target="_blank"
+       transform="translate(0,-5)"
+       xlink:href="https://desk.draw.io/support/solutions/articles/16000042487"
+       id="a79">
+      <text
+         x="50%"
+         y="100%"
+         font-size="10px"
+         text-anchor="middle"
+         id="text77">Viewer does not support full SVG 1.1</text>
+    </a>
+  </switch>
+  <switch
+     id="switch59-3"
+     transform="translate(146.50413,-17.181918)">
+
+    <text
+       x="54.980572"
+       y="38.73576"
+       font-family="'Courier New'"
+       font-size="24.7686px"
+       font-weight="bold"
+       text-anchor="middle"
+       id="text57-6"
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-size:24.7686px;font-family:sans-serif;-inkscape-font-specification:'sans-serif, Bold';font-variant-ligatures:normal;font-variant-caps:normal;font-variant-numeric:normal;font-variant-east-asian:normal;text-anchor:middle;stroke-width:1.37603">Puntero</text>
+  </switch>
+</svg>
