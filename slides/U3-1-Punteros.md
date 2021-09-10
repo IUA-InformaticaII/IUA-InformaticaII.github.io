@@ -283,9 +283,22 @@ int main(){
 
 ## Resumen:
 
-* Un * en la **declaración** de una variable antes del nombre, declara un puntero.
-* Un & antes de una variable indica la **dirección** de memoria de dicha variable.
-* Un * antes de un puntero, indica que estoy **desrreferenciandolo** y obteniendo el valor de donde apunta.
+* Un ✱ en la **declaración** de una variable antes del nombre, declara un puntero.
+* Un 🙴 antes de una variable indica la **dirección** de memoria de dicha variable.
+* Un ✱ antes de un puntero, indica que estoy **desrreferenciandolo** y obteniendo el valor de donde apunta.
+
+---
+## Resumen:
+
+```cpp
+int n = 5;
+int *pp;    // Declaro pp como puntero a entero
+
+pp = &n;    // Guardo en pp el la dirección de memoria de n
+
+cout << *n; // Escribo en pantalla el valor de donde apunta
+            // pp. Estoy desrreferenciando el puntero pp
+```
 
 ---
 
@@ -311,7 +324,7 @@ que se utiliza de manera similar.
 
 int arr[3]{ 1, 2, 3 };  // arr == &arr[0]
 
-cout << arr[0] << " = " << *arr << endl;
+cout << arr[0] << " = " << *(arr + 0) << endl;
 
 cout << arr[1] << " = " << *(arr + 1) << endl;
 
