@@ -26,7 +26,7 @@ slideNumber: true
 Es la forma de especificar un proceso basado en su propia definición.
 
 Un algoritmo recursivo es un algoritmo que expresa la solución de un 
-problema en terminos de una llamada a si mismo. La llamada a si mismo 
+problema en términos de una llamada a sí mismo. La llamada a sí mismo 
 se conoce como llamada recursiva
 
 
@@ -37,7 +37,7 @@ se conoce como llamada recursiva
         funcion();
     }
 ```
-Una función que se llama a si misma.
+Una función que se llama a sí misma.
 
 ---
 ## ¿Por que una función se llamaría a si misma?
@@ -58,7 +58,7 @@ Porque es recursiva, 🤣
 
 # n!
 
-Plantiemos una solución.
+Planteemos una solución.
 
 ---
 ### Ejemplo: Factorial
@@ -80,7 +80,7 @@ Hay solo un problema
 ## 2! = 2 * 1!
 ## 1! = 1 * 0!
 ## 0! = 0 * -1!
-¿Cuando paro?
+¿Cuándo paro?
 
 ---
 ## Ejemplo: Factorial
@@ -90,7 +90,7 @@ Hay solo un problema
 ---
 ## Ejemplo: Factorial
 
-## 5! = 5 * 3! = 120
+## 5! = 5 * 4! = 120
 ## 4! = 4 * 3! = 24
 ## 3! = 3 * 2! = 6
 ## 2! = 2 * 1! = 2
@@ -114,7 +114,7 @@ Hay solo un problema
     
 ---
 ## Función recursiva
-* Como este problema se parece al problema original, la función llama a una copia de si misma
+* Como este problema se parece al problema original, la función llama a una copia de sí misma
 para que resuelva el problema. (llamada recursiva)
 
 ---
@@ -164,9 +164,9 @@ Una función recursiva puede tener uno o más casos bases y una o más llamadas 
 ## Funciones recursivas
 ### Como pensar el caso Base
 
-* Piensa en cual sería el problema más simple
-* Piensa cual sería la solución directa de este subproblema
-* Asegurate que la recursion converge al caso base
+* Piensa en cuál sería el problema más simple
+* Piensa cuál sería la solución directa de este subproblema
+* Asegúrate que la recursion converge al caso base
 
 ---
 ### Ejemplo Potencia
@@ -246,4 +246,4 @@ probar diferentes caminos y volver si no es el correcto.
 ![Laberinto](images/laberinto.png)
 ---
 
-# Ejemplo Laberinto ...
+# Ejemplo Laberinto …
