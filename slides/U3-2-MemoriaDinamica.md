@@ -50,12 +50,12 @@ Esto permite trabajar con cualquier tamaño de datos
 ---
 ## Almacenamiento dinámico
 
-#### Ventaja
+#### <span style="color: lightgreen">Ventaja</span>
     
 * Puedo utilizar solo la memoria que me hace falta
 * Puedo pedir mas memoria a demanda
     
-#### Inconvenientes
+#### <span style="color: red"> Inconvenientes </span>
     
 * Debo asegurarme de liberar la memoria que ya no utilizo
 
@@ -192,11 +192,11 @@ int main(){
 
 ## new/delete: Asignación de memoria en C++
 
-En C++ se introducen las funciones new y delete, que vienen a remplazar a malloc() y free()
+En C++ se introducen las funciones <span style="color: lightblue">new</span> y <span style="color: lightblue">delete</span>, que vienen a remplazar a malloc() y free()
 
-New tiene como ventaja que no hay que pasarle los valores en bytes, sino el tipo de dato que quiero.
+**New** tiene como ventaja que no hay que pasarle los valores en bytes, sino el tipo de dato que quiero.
 
-En realidad, new y delete hacen mas cosas que malloc y free. Esto es debido que si hago un new de una clase
+En realidad, **new** y **delete** hacen mas cosas que malloc y free. Esto es debido que si hago un new de una clase
         (POO) new ejecuta el constructor de la clase.
 
 
@@ -208,16 +208,19 @@ En realidad, new y delete hacen mas cosas que malloc y free. Esto es debido que 
 
 int main(){
     int *miPuntero;
-    int cant = 5;
+    int cant;
     cin >> cant;
-    miPuntero = new int;
+    miPuntero = new int[cant];
     if(miPuntero == nullptr){
         cout << "No tengo tanta memoria!";
         exit(EXIT_FAILURE);
     }
-    cin >> *miPuntero;
-
-    cout << "dato " << i << " = " <<  *miPuntero;
+    for( i = 0 ; i < cant ; i++ ){
+        cin >> miPuntero[i];
+    }
+    for( i = 0 ; i < cant ; i++ ){
+        cout << "dato " << i << " = " <<  miPuntero[i];
+    }
 
     delete miPuntero;
 }
@@ -244,7 +247,7 @@ int main(){
     int filas, columnas;
     cin >> filas;
     cin >> columnas;
-    miMatriz = miMatriz = new int*[filas]; // o (int**) malloc( filas * sizeof(int*) );
+    miMatriz = new int*[filas]; // o (int**) malloc( filas * sizeof(int*) );
     // Debería vefiricar que miMatriz no es NULL
     int i;
     for( i = 0 ; i < filas ; i++ ){
