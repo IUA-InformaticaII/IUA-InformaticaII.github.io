@@ -22,9 +22,9 @@ y suprimirse elementos por el otro extremo (FRENTE)
 ---
 ## Colas
 
-Las colas son estructuras que se encuentran frecuentemente en la vida diaria. Algunos ejemplos se encuentran en la
-fila de un banco, un grupo de automóviles esperando en una cab ina de peaje, personas esperando para comprar un
-boleto pa ra el cine, etc.
+Las colas son estructuras que se encuentran frecuentemente en la vida diaria. Algunos ejemplos serían, la
+fila de un banco, un grupo de automóviles esperando en una cabina de peaje, personas esperando para comprar un
+boleto para el cine, etc.
 <img src="images/colas/colapersonas.jpg" alt="">
 
 ---
@@ -41,6 +41,12 @@ La propiedad anterior se conoce como **FIFO** ( First In First Out ), es decir, 
 primero en salir.
 
 <img src="images/colas/fifo.png" alt="">
+---
+## Colas 
+
+Un ejemplo en informática es la cola de procesos
+
+<img src="images/colas/cpu-cola.png" alt="">
 
 ---
 ## Colas
@@ -71,3 +77,5 @@ primero en salir.
 ---
 ## Colas
 ## A implementar.
+
+<img src="images/CodeMonkey1.webp" alt="">

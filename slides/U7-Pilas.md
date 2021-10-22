@@ -32,15 +32,6 @@ Las pilas son estructuras que se encuentran frecuentemente en la vida diaraia:
 ---
 ## Pilas
 
-La pila es uno de los conceptos más útiles dentro de la ciencia de la computación. ciencia de la computación
-
-## Stack Overflow
-
-<img src="images/pilas/stackoverflow.png" alt="">
-
----
-## Pilas
-
 Por ejemplo, la forma en que se acomodan los libros en un escritorio puede verse de la siguiente manera: 
 * se puede añadir un libro a una pila poniéndolo  arriba
 * se puede ver qué libro se encuentra en la cima
@@ -51,12 +42,24 @@ Por ejemplo, la forma en que se acomodan los libros en un escritorio puede verse
 ---
 ## Pilas
 
-La propiedad anterior se conoce como LIFO ( Last In First Out )
-Es decir, el último en entrar será el primero en salir y al que se tenga acceso.
+La pila es uno de los conceptos más útiles dentro de la ciencia de la computación.
+
+## Stack Overflow
+
+<img src="images/pilas/stackoverflow.png" alt="">
 
 ---
 ## Pilas
-Otros nombres con los que se conoce a las pilas son 'lista empuja hacia abajo' (pushdown list ).
+
+Por ej, la pila de llamadas a funciones (call stack)
+
+<img src="images/pilas/callStack.png" alt="">
+
+---
+## Pilas
+   
+La propiedad anterior se conoce como **LIFO** *( Last In First Out )*
+Es decir, el último en entrar será el primero en salir y al que se tenga acceso.
 
 ---
 ## TDA - Pila
@@ -67,3 +70,9 @@ Otros nombres con los que se conoce a las pilas son 'lista empuja hacia abajo' (
 * **sacar** - pop()
 * **verTope** - peek()
 * **esVacia** - isEmpty()
+
+---
+## Colas
+## A implementar.
+
+<img src="images/CodeMonkey1.webp" alt="">
